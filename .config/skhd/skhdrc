@@ -1,0 +1,9 @@
+# shift + cmd - l : ~/.config/yabai/ybc.sh '--grid 1:2:1:0:2:1'
+# shift + cmd - l : ~/.config/yabai/ybc.sh '--resize left:600:0'
+# shift + cmd - j : ~/.config/yabai/ybc.sh '--resize right:-600:0'
+# shift + cmd - return : ~/.config/yabai/ybc.sh '--grid 1:1:0:0:1:1'
+shift + cmd - l : zx ~/.config/yabai/ybc.mjs right
+shift + cmd - j : zx ~/.config/yabai/ybc.mjs left
+shift + alt - return : zx ~/.config/yabai/ybc.mjs max
+shift + cmd - m : zx ~/.config/yabai/ybc.mjs current
+

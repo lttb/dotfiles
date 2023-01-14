@@ -1,0 +1,7 @@
+[submodule ".config/nvim"]
+	path = .config/nvim
+	url = git@github.com:lttb/nvim.git
+  branch = main
+[submodule ".config/kitty/themes/catppuccin"]
+	path = .config/kitty/themes/catppuccin
+	url = git@github.com:lttb/catppuccin-kitty.git

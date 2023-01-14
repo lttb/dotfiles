@@ -1,0 +1,65 @@
+#!/bin/sh
+
+# vim:fileencoding=utf-8:ft=conf:foldmethod=marker
+
+# Because Git submodule commands cannot operate without a work tree, they must
+# be run from within $HOME (assuming this is the root of your dotfiles)
+cd "$HOME"
+
+echo "Init submodules"
+yadm submodule update --recursive --init
+
+# MacOS settings {{{
+
+echo 'Preparing MacOS...'
+
+# Close any open System Preferences panes, to prevent them from overriding
+# settings we’re about to change
+osascript -e 'tell application "System Preferences" to quit'
+
+# install xcode tools
+xcode-select --install || echo 'xcode tools are already installed';
+
+# enable keyboard navigation in os applications with tab/shift+tab
+defaults write -g AppleKeyboardUIMode -int 2 \
+    && echo '✅ OS wide keyboard navigation is enabled' \
+    || echo '❗️ Could not set up keyboard navigation';
+
+# repeat keys on hold more often
+defaults write -g KeyRepeat -int 2 \
+    && defaults write -g InitialKeyRepeat -int 15 \
+    && echo '✅ key repeat is increased' \
+    || echo '❗️ Could not set up key repeat speed';
+
+echo 'MacOS preparation is done'
+
+#}}}
+
+# Homebrew {{{
+
+# install homebrew if it's missing
+if ! command -v brew >/dev/null 2>&1; then
+    echo "Installing homebrew"
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+if [ -f "$HOME/.Brewfile" ]; then
+    echo "Updating homebrew bundle"
+    brew bundle --global
+fi
+
+#}}}
+
+# install zimfw
+if command -v zimfw >/dev/null 2>&1; then
+    echo "Installing zimfw"
+    curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
+fi
+
+# install npm packages
+if command -v npm >/dev/null 2>&1; then
+    echo "Installing global npm packages"
+    npm i -g arweave-deploy lerna serve ts-node vercel zx
+fi
+
+	

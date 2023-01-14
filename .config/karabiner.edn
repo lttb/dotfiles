@@ -1,0 +1,48 @@
+{
+    ;; !  | means mandatory -   modifier(s) alone when pressend change behavior
+    ;; #  | means optional  -   modifiers are optional (but atleast one necessary)
+
+    ;; :!Ca is keycode :a and prefix a with !C
+
+    ;; C  | left_command
+    ;; T  | left_control
+    ;; O  | left_option
+    ;; S  | left_shift
+    ;; F  | fn
+    ;; Q  | right_command
+    ;; W  | right_control
+    ;; E  | right_option
+    ;; R  | right_shift
+
+    ;; ## | optional any (this has no effect when used on the RHS; only LHS)
+    ;; !! | command + control + optional + shift (hyper)
+
+    ;; to understand better how modifiers work in karabiner
+    ;; karabiner definition of mandatory and optional
+    ;; https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/from/modifiers/
+
+
+    ;; need to prefix C T O S F with ! or #
+    ;;
+    ;; code for all this:
+    ;; https://github.com/yqrashawn/GokuRakuJoudo/blob/b9b334a187379f9bc8182ad59e2cca2a1789e9c0/src/karabiner_configurator/keys.clj#L68
+
+ :layers {:hyper-mode {:key :caps_lock :alone {:key :escape}}}
+
+ :main [{:des "hyper-mode"
+         :rules [:hyper-mode
+                 [:j :left_arrow]
+                 [:i :up_arrow]
+                 [:l :right_arrow]
+                 [:k :down_arrow]
+                 [:spacebar :return_or_enter]
+                 ]}
+        {:des "fn"
+         :rules [
+
+                 [:!Fj {:mkey {:x -800}}]
+                 [:!Fi {:mkey {:y -800}}]
+                 [:!Fl {:mkey {:x 800}}]
+                 [:!Fk {:mkey {:y 800}}]
+                 ]}
+        ]}

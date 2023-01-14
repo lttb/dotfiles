@@ -1,0 +1,65 @@
+# vim:fileencoding=utf-8:foldmethod=marker
+
+# Start configuration added by Zim install {{{
+# -------
+# Modules
+# -------
+
+# Sets sane Zsh built-in environment options.
+zmodule environment
+# Provides handy git aliases and functions.
+# zmodule git
+# Applies correct bindkeys for input events.
+zmodule input
+# Sets a custom terminal title.
+zmodule termtitle
+# Utility aliases and functions. Adds colour to ls, grep and less.
+zmodule utility
+
+#
+# Prompt
+#
+# Exposes to prompts how long the last command took to execute, used by asciiship.
+zmodule duration-info
+# Exposes git repository status information to prompts, used by asciiship.
+zmodule git-info
+# A heavily reduced, ASCII-only version of the Spaceship and Starship prompts.
+zmodule asciiship
+
+# Additional completion definitions for Zsh.
+zmodule zsh-users/zsh-completions
+# Enables and configures smart and extensive tab completion.
+# completion must be sourced after zsh-users/zsh-completions
+zmodule completion
+# Fish-like autosuggestions for Zsh.
+zmodule zsh-users/zsh-autosuggestions
+# Fish-like syntax highlighting for Zsh.
+# zsh-users/zsh-syntax-highlighting must be sourced after completion
+# zmodule zsh-users/zsh-syntax-highlighting
+zmodule zdharma-continuum/fast-syntax-highlighting
+# Fish-like history search (up arrow) for Zsh.
+# zsh-users/zsh-history-substring-search must be sourced after zsh-users/zsh-syntax-highlighting
+zmodule zsh-users/zsh-history-substring-search
+# }}} End configuration added by Zim install
+
+# zmodule romkatv/powerlevel10k
+
+# zmodule s1ck94
+
+# zmodule reobin/typewritten --name typewritten
+
+
+zmodule ohmyzsh/ohmyzsh \
+    -f 'lib/history' -s 'lib/history.zsh' \
+    -f 'lib/git' -s 'lib/git.zsh' \
+    -f 'plugins/history' -s 'plugins/history/history.plugin.zsh' \
+    -f 'plugins/git' -s 'plugins/git/git.plugin.zsh' \
+    -f 'plugins/autojump' -s 'plugins/autojump/autojump.plugin.zsh'
+
+# zmodule marzocchi/zsh-notify -s notify.plugin.zsh
+
+# zmodule sainnhe/edge -f 'zsh' -s 'zsh/.zsh-theme-edge-light' 
+
+zmodule TheLocehiliosan/yadm -f 'completion/zsh'
+
+
