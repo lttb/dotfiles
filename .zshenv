@@ -14,7 +14,9 @@ export NVIM_LISTEN_ADDRESS="/tmp/nvimsocket nvim"
 . "$HOME/.cargo/env"
 
 export EDITOR="nvim"
-export BAT_THEME="base16-256"
+export BAT_THEME="Coldark-Dark"
+
+export XDG_CONFIG_HOME="$HOME/.config"
 
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
