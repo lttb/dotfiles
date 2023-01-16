@@ -229,6 +229,9 @@ alias nv="neovide --multigrid --frame buttonless"
 
 alias ssh="kitty +kitten ssh"
 
+alias lg="lazygit"
+alias gi="gitui"
+
 # alias ni='n $(cat .nvmrc)'
 # alias nu='n use $(cat .nvmrc)'
 
@@ -266,18 +269,6 @@ ybc() {
                         yabai -m window \$0 $1
                 "
 
-}
-
-lg()
-{
-    export LAZYGIT_NEW_DIR_FILE=~/.lazygit/newdir
-
-    lazygit "$@"
-
-    if [ -f $LAZYGIT_NEW_DIR_FILE ]; then
-            cd "$(cat $LAZYGIT_NEW_DIR_FILE)"
-            rm -f $LAZYGIT_NEW_DIR_FILE > /dev/null
-    fi
 }
 
 # }}}
