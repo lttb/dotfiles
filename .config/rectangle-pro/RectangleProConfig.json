@@ -110,7 +110,7 @@
       "int" : 2
     },
     "iCloudSync" : {
-      "int" : 0
+      "int" : 1
     },
     "ignoredSnapAreas" : {
       "int" : 0
@@ -131,7 +131,7 @@
       "string" : "{\"b\":119,\"t\":36,\"tm\":9,\"id\":0,\"l\":0,\"bl\":13,\"r\":1,\"tl\":15,\"br\":14,\"tr\":16}"
     },
     "manualSpecs" : {
-      "string" : "[{\"x\":\"0.2\",\"display\":0,\"y\":\"0.35\",\"id\":9,\"h\":\"0.6\",\"w\":\"0.6\",\"loc\":9,\"name\":\"center focus\"}]"
+      "string" : "[{\"x\":\"0.25\",\"display\":0,\"y\":\"0.35\",\"id\":9,\"h\":\"0.5\",\"w\":\"0.5\",\"loc\":9,\"name\":\"center focus\"}]"
     },
     "maximizeAcrossDisplays" : {
       "int" : 0
@@ -434,6 +434,6 @@
       "modifierFlags" : 1310720
     }
   },
-  "timestamp" : 695581331.57256198,
+  "timestamp" : 695584106.73904097,
   "version" : "131"
 }
