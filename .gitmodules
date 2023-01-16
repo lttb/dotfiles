@@ -5,3 +5,4 @@
 [submodule ".config/kitty/themes/catppuccin"]
 	path = .config/kitty/themes/catppuccin
 	url = git@github.com:lttb/catppuccin-kitty.git
+  branch = main
