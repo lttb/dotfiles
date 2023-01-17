@@ -2,7 +2,7 @@
     selected_tab: Reset,
     command_fg: White,
     selection_bg: Blue,
-    selection_fg: White,
+    selection_fg: Black,
     cmdbar_bg: Black,
     cmdbar_extra_lines_bg: Blue,
     disabled_fg: DarkGray,
@@ -19,5 +19,5 @@
     push_gauge_bg: Blue,
     push_gauge_fg: Reset,
     tag_fg: LightMagenta,
-    branch_fg: LightYellow,
+    branch_fg: Black,
 )
