@@ -36,11 +36,11 @@ zmodule zsh-users/zsh-autosuggestions
 # Fish-like syntax highlighting for Zsh.
 # zsh-users/zsh-syntax-highlighting must be sourced after completion
 # zmodule zsh-users/zsh-syntax-highlighting
-zmodule zdharma-continuum/fast-syntax-highlighting
 # Fish-like history search (up arrow) for Zsh.
 # zsh-users/zsh-history-substring-search must be sourced after zsh-users/zsh-syntax-highlighting
 zmodule zsh-users/zsh-history-substring-search
 # }}} End configuration added by Zim install
+# zmodule https://github.com/zdharma-continuum/fast-syntax-highlighting.git --branch master
 
 # zmodule romkatv/powerlevel10k
 
@@ -54,7 +54,8 @@ zmodule ohmyzsh/ohmyzsh \
     -f 'lib/git' -s 'lib/git.zsh' \
     -f 'plugins/history' -s 'plugins/history/history.plugin.zsh' \
     -f 'plugins/git' -s 'plugins/git/git.plugin.zsh' \
-    -f 'plugins/autojump' -s 'plugins/autojump/autojump.plugin.zsh'
+    -f 'plugins/autojump' -s 'plugins/autojump/autojump.plugin.zsh' \
+    -f 'plugins/fast-syntax-highlighting' -s 'plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh'
 
 # zmodule marzocchi/zsh-notify -s notify.plugin.zsh
 
