@@ -54,7 +54,6 @@ zmodule ohmyzsh/ohmyzsh \
     -f 'lib/git' -s 'lib/git.zsh' \
     -f 'plugins/history' -s 'plugins/history/history.plugin.zsh' \
     -f 'plugins/git' -s 'plugins/git/git.plugin.zsh' \
-    -f 'plugins/autojump' -s 'plugins/autojump/autojump.plugin.zsh' \
     -f 'plugins/fast-syntax-highlighting' -s 'plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh'
 
 # zmodule marzocchi/zsh-notify -s notify.plugin.zsh

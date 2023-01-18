@@ -357,3 +357,5 @@ source ~/.config/broot/launcher/bash/br
 [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
 
 eval "$(fnm env)"
+
+eval "$(zoxide init zsh)"
