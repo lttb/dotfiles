@@ -1,0 +1,29 @@
+[include]
+  path = ~/.config/git/private/.gitconfig
+
+[user]
+	name = lttb
+
+[push]
+	default = current
+	autoSetupRemote = true
+
+[core]
+  pager = delta
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true  # use n and N to move between diff sections
+  light = false
+  syntax-theme = Catppuccin-frappe
+
+[merge]
+	conflictstyle = diff3
+
+[diff]
+  colorMoved = default
+
+[pull]
+	rebase = true
