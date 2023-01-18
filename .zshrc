@@ -30,34 +30,32 @@ bindkey -v
 #SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
 
 # Remove path separator from WORDCHARS.
-WORDCHARS=${WORDCHARS//[\/\(\)]}
+WORDCHARS=${WORDCHARS//[\/\(\)-]}
 
+# -----------------
+# Zim configuration
+# -----------------
+
+# Use degit instead of git as the default tool to install and update modules.
+#zstyle ':zim:zmodule' use 'degit'
 
 # --------------------
 # Module configuration
 # --------------------
 
 #
-# completion
-#
-
-# Set a custom path for the completion dump file.
-# If none is provided, the default ${ZDOTDIR:-${HOME}}/.zcompdump is used.
-#zstyle ':zim:completion' dumpfile "${ZDOTDIR:-${HOME}}/.zcompdump-${ZSH_VERSION}"
-
-#
 # git
 #
 
 # Set a custom prefix for the generated aliases. The default prefix is 'G'.
-#zstyle ':zim:git' aliases-prefix 'g'
+zstyle ':zim:git' aliases-prefix 'g'
 
 #
 # input
 #
 
 # Append `../` to your input for each `.` you type after an initial `..`
-#zstyle ':zim:input' double-dot-expand yes
+zstyle ':zim:input' double-dot-expand yes
 
 #
 # termtitle
@@ -72,10 +70,13 @@ zstyle ':zim:termtitle' format '%1~'
 # zsh-autosuggestions
 #
 
+# Disable automatic widget re-binding on each precmd. This can be set when
+# zsh-users/zsh-autosuggestions is the last module in your ~/.zimrc.
+ZSH_AUTOSUGGEST_MANUAL_REBIND=1
+
 # Customize the style that the suggestions are shown with.
 # See https://github.com/zsh-users/zsh-autosuggestions/blob/master/README.md#suggestion-highlight-style
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
-
 
 #
 # zsh-syntax-highlighting
@@ -88,16 +89,28 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
 # Customize the main highlighter styles.
 # See https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters/main.md#how-to-tweak-it
 #typeset -A ZSH_HIGHLIGHT_STYLES
-# ZSH_HIGHLIGHT_STYLES[comment]='fg=242'
+#ZSH_HIGHLIGHT_STYLES[comment]='fg=242'
 
 # ------------------
 # Initialize modules
 # ------------------
 
+ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
+# Download zimfw plugin manager if missing.
+if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
+  if (( ${+commands[curl]} )); then
+    curl -fsSL --create-dirs -o ${ZIM_HOME}/zimfw.zsh \
+        https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
+  else
+    mkdir -p ${ZIM_HOME} && wget -nv -O ${ZIM_HOME}/zimfw.zsh \
+        https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
+  fi
+fi
+# Install missing modules, and update ${ZIM_HOME}/init.zsh if missing or outdated.
 if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
-  # Update static initialization script if it does not exist or it's outdated, before sourcing it
   source ${ZIM_HOME}/zimfw.zsh init -q
 fi
+# Initialize modules.
 source ${ZIM_HOME}/init.zsh
 
 # ------------------------------
@@ -108,94 +121,19 @@ source ${ZIM_HOME}/init.zsh
 # zsh-history-substring-search
 #
 
-
-# Bind ^[[A/^[[B manually so up/down works both before and after zle-line-init
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
-
-# Bind up and down keys
 zmodload -F zsh/terminfo +p:terminfo
-if [[ -n ${terminfo[kcuu1]} && -n ${terminfo[kcud1]} ]]; then
-  bindkey ${terminfo[kcuu1]} history-substring-search-up
-  bindkey ${terminfo[kcud1]} history-substring-search-down
-fi
-
-bindkey '^P' history-substring-search-up
-bindkey '^N' history-substring-search-down
-bindkey -M vicmd 'k' history-substring-search-up
-bindkey -M vicmd 'j' history-substring-search-down
+# Bind ^[[A/^[[B manually so up/down works both before and after zle-line-init
+for key ('^[[A' '^P' ${terminfo[kcuu1]}) bindkey ${key} history-substring-search-up
+for key ('^[[B' '^N' ${terminfo[kcud1]}) bindkey ${key} history-substring-search-down
+for key ('k') bindkey -M vicmd ${key} history-substring-search-up
+for key ('j') bindkey -M vicmd ${key} history-substring-search-down
+unset key
 # }}} End configuration added by Zim install
 
-ZSH_AUTOSUGGEST_USE_ASYNC="yes"
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='fg=102,bold'
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='fg=red,bold'
 
-# HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='bg=gray,fg=white,bold'
-
-# PROMPT {{{
-
-# RPROMPT="%F{245}%~"
-
-PS1='%(2L.%B%F{yellow}(%L)%f%b .)%(!.%B%F{red}%n%f%b in .${SSH_TTY:+"%B%F{yellow}%n%f%b in "})${SSH_TTY:+"%B%F{green}%m%f%b in "}%B%F{cyan}%~%f%b${(e)git_info[prompt]}${VIRTUAL_ENV:+" via %B%F{yellow}${VIRTUAL_ENV:t}%b%f"}${duration_info}
-%B%(1j.%F{blue}*%f .)%(?.%F{green}.%F{red}%?'
-
-PS1=""
-PS1="%F{245}%~
-"
-
-terminfo_down_sc=$terminfo[cud1]$terminfo[cuu1]$terminfo[sc]$terminfo[cud1]
-PS1_2="
-%F{245}%~"
-PS1="%{$terminfo_down_sc$PS1_2$terminfo[rc]%}"
-
-preexec() {
-  local BREAK_LINE="
-"
-  local grey=245
-  local red=1
-  local yellow=3
-  local blue=4
-  local magenta=5
-  local cyan=6
-  local white=7
-
-  zstyle ':zim:duration-info' format '%B%F{cyan}%d%f%b'
-
-  zstyle ':zim:git-info:stashed' format '≡'
-  zstyle ':zim:git-info:unindexed' format '*'
-  zstyle ':zim:git-info:indexed' format '🚀'
-  zstyle ':zim:git-info:ahead' format '⇡'
-  zstyle ':zim:git-info:behind' format '⇣'
-  zstyle ':zim:git-info:keys' format \
-      'status' '%S%I%i%A%B' \
-      'prompt' '%%F{245}%b%c%s${(e)git_info[status]:+" %F{245}[${(e)git_info[status]}]"}%f%%b'
-
-  local styled_wd="%F{$blue}%~"
-  local styled_duration_info="${VIRTUAL_ENV:+" via %B%F{yellow}${VIRTUAL_ENV:t}%b%f"}${duration_info}"
-  local styled_git_branch='%f%b${(e)git_info[prompt]}'
-  local styled_error="%B%(?..%F{124}∙)%f%b"
-
-  PS1="
-$styled_wd $styled_git_branch $styled_duration_info$styled_error
-"
-
-  RPROMPT=""
-
-  # local EXIT="$?"
-  # local styled_error=""
-
-  # if [[ $EXIT -eq 0 ]]; then
-  #   styled_error=" x"
-  # else
-  #   styled_error=" ●"
-  # fi
-
-  # PS1+="$styled_error"
-#  RPROMPT="$styled_duration_info"
-}
-
-precmd() {
-
-}
-# }}}
+source ${HOME}/.config/zsh/prompt.zsh
 
 # Key Bindings {{{
 # kitty
@@ -203,19 +141,14 @@ bindkey "\e[1;3D" backward-word # ⌥←
 bindkey "\e[1;3C" forward-word # ⌥→
 
 backward-kill-dir () {
-    zle backward-kill-word
+  zle backward-kill-word
 }
 zle -N backward-kill-dir
 bindkey '^[^?' backward-kill-dir # ⌥-bksp
 # }}}
 
-# aliases {{{
+# Aliases {{{
 alias local-postgres="docker run -d --env-file ~/.secrets/dev/.env.pg  -p 5432:5432 -v pgdata:/var/lib/postgresql/data --rm --name local-postgres postgres"
-
-# alias dotfiles='cd ~ &&\
-#     export GIT_DIR=$HOME/.local/share/yadm/repo.git &&\
-#     export GIT_WORK_TREE=$HOME &&\
-#     nvim $(git ls-files --exclude-standard | tr "\r\n" " ")'
 
 alias d='\
     GIT_DIR=$HOME/.local/share/yadm/repo.git \
@@ -224,137 +157,74 @@ alias d='\
 
 alias cl="clear"
 
-alias nv="neovide --multigrid --frame buttonless"
+alias nv="neovide"
 
 alias ssh="kitty +kitten ssh"
 
 alias lg="lazygit"
 alias gi="gitui -t themes/catppuccin/theme/frappe.ron"
 
-# alias ni='n $(cat .nvmrc)'
-# alias nu='n use $(cat .nvmrc)'
-
+alias j="z"
+alias ji="zi"
 # }}}
 
-# functions {{{
+# Functions {{{
 
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 
 gob() {
     branch_search="$(\
-        git branch --sort=-committerdate --format="%(if)%(HEAD)%(then)*%(else) %(end) %(refname:short): [%(committerdate)] @%(authorname) %(subject)" \
-        | fzf \
-        | sed 's/:.\{1,\}//' \
-        | sed 's/^[* ]*//' \
+      git branch --sort=-committerdate --format="%(if)%(HEAD)%(then)*%(else) %(end) %(refname:short): [%(committerdate)] @%(authorname) %(subject)" \
+      | fzf \
+      | sed 's/:.\{1,\}//' \
+      | sed 's/^[* ]*//' \
     )"
 
     git checkout $branch_search
 }
 
 yb() {
-        yabai -m query --windows |
-                jq ".[] | select(.app | test(\"$1\")).id" |
-                xargs -L1 sh -c "
-                        yabai -m window \$0 --toggle float &&
-                        yabai -m window \$0 $2
-                "
+    yabai -m query --windows |
+      jq ".[] | select(.app | test(\"$1\")).id" |
+      xargs -L1 sh -c "
+        yabai -m window \$0 --toggle float &&
+        yabai -m window \$0 $2
+      "
 }
 
 ybc() {
-        yabai -m query --windows |
-                jq ".[] | select(.app | test($(yabai -m query --windows --window | jq '.app'))).id" |
-                xargs -L1 sh -c "
-                        yabai -m window \$0 --toggle float &&
-                        yabai -m window \$0 $1
-                "
-
+    yabai -m query --windows |
+      jq ".[] | select(.app | test($(yabai -m query --windows --window | jq '.app'))).id" |
+      xargs -L1 sh -c "
+        yabai -m window \$0 --toggle float &&
+        yabai -m window \$0 $1
+      "
 }
 
 # }}}
 
 # GCP {{{
+
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/lttb/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/lttb/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '~/google-cloud-sdk/path.zsh.inc' ]; then . '~/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/lttb/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/lttb/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then . '~/google-cloud-sdk/completion.zsh.inc'; fi
+
 # }}}
 
-# required for zsh-notify
-zmodload zsh/datetime
+# fzf {{{
 
-# npm completion {{{
-#
-# npm command completion script
-#
-# Installation: npm completion >> ~/.bashrc  (or ~/.zshrc)
-# Or, maybe: npm completion > /usr/local/etc/bash_completion.d/npm
-#
+# catppuccin frappe
+# @see https://github.com/catppuccin/fzf
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#414559,bg:#303446,spinner:#f2d5cf,hl:#e78284 \
+--color=fg:#c6d0f5,header:#e78284,info:#ca9ee6,pointer:#f2d5cf \
+--color=marker:#f2d5cf,fg+:#c6d0f5,prompt:#ca9ee6,hl+:#e78284"
 
-if type complete &>/dev/null; then
-  _npm_completion () {
-    local words cword
-    if type _get_comp_words_by_ref &>/dev/null; then
-      _get_comp_words_by_ref -n = -n @ -n : -w words -i cword
-    else
-      cword="$COMP_CWORD"
-      words=("${COMP_WORDS[@]}")
-    fi
-
-    local si="$IFS"
-    IFS=$'\n' COMPREPLY=($(COMP_CWORD="$cword" \
-                           COMP_LINE="$COMP_LINE" \
-                           COMP_POINT="$COMP_POINT" \
-                           npm completion -- "${words[@]}" \
-                           2>/dev/null)) || return $?
-    IFS="$si"
-    if type __ltrim_colon_completions &>/dev/null; then
-      __ltrim_colon_completions "${words[cword]}"
-    fi
-  }
-  complete -o default -F _npm_completion npm
-elif type compdef &>/dev/null; then
-  _npm_completion() {
-    local si=$IFS
-    compadd -- $(COMP_CWORD=$((CURRENT-1)) \
-                 COMP_LINE=$BUFFER \
-                 COMP_POINT=0 \
-                 npm completion -- "${words[@]}" \
-                 2>/dev/null)
-    IFS=$si
-  }
-  compdef _npm_completion npm
-elif type compctl &>/dev/null; then
-  _npm_completion () {
-    local cword line point words si
-    read -Ac words
-    read -cn cword
-    let cword-=1
-    read -l line
-    read -ln point
-    si="$IFS"
-    IFS=$'\n' reply=($(COMP_CWORD="$cword" \
-                       COMP_LINE="$line" \
-                       COMP_POINT="$point" \
-                       npm completion -- "${words[@]}" \
-                       2>/dev/null)) || return $?
-    IFS="$si"
-  }
-  compctl -K _npm_completion npm
-fi
-# }}}
-
-# fzf{{{
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-# }}}
 
-# broot {{{
-source ~/.config/broot/launcher/bash/br
 # }}}
-
-# tabtab source for packages
-# uninstall by removing these lines
-[[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
 
 eval "$(fnm env)"
 
