@@ -6,3 +6,9 @@
 	path = .config/kitty/themes/catppuccin
 	url = git@github.com:lttb/catppuccin-kitty.git
   branch = main
+[submodule ".config/gitui/themes/catppuccin"]
+	path = .config/gitui/themes/catppuccin
+	url = git@github.com:catppuccin/gitui.git
+[submodule ".config/bat/themes/catppuccin"]
+	path = .config/bat/themes/catppuccin
+	url = git@github.com:catppuccin/bat.git

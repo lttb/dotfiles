@@ -14,9 +14,15 @@ export NVIM_LISTEN_ADDRESS="/tmp/nvimsocket nvim"
 . "$HOME/.cargo/env"
 
 export EDITOR="nvim"
-export BAT_THEME="Coldark-Dark"
 
 export XDG_CONFIG_HOME="$HOME/.config"
+
+# catppuccin frappe
+# @see https://github.com/catppuccin/fzf
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#414559,bg:#303446,spinner:#f2d5cf,hl:#e78284 \
+--color=fg:#c6d0f5,header:#e78284,info:#ca9ee6,pointer:#f2d5cf \
+--color=marker:#f2d5cf,fg+:#c6d0f5,prompt:#ca9ee6,hl+:#e78284"
 
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
