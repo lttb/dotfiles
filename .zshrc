@@ -130,6 +130,8 @@ for key ('j') bindkey -M vicmd ${key} history-substring-search-down
 unset key
 # }}} End configuration added by Zim install
 
+HISTORY_IGNORE="*'z#*'"
+
 HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='fg=102,bold'
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='fg=red,bold'
@@ -168,8 +170,6 @@ alias ssh="kitty +kitten ssh"
 alias lg="lazygit"
 alias gi="gitui -t themes/catppuccin/theme/frappe.ron"
 
-alias j="z"
-alias ji="zi"
 # }}}
 
 # Functions {{{
@@ -232,4 +232,4 @@ export FZF_DEFAULT_OPTS=" \
 
 eval "$(fnm env)"
 
-eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd j zsh)"
