@@ -138,21 +138,6 @@ HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='fg=red,bold'
 
 source ${HOME}/.config/zsh/prompt.zsh
 
-# Key Bindings {{{
-# kitty
-bindkey "\e[1;3D" backward-word # ⌥←
-bindkey "\e[1;3C" forward-word # ⌥→
-
-backward-kill-dir () {
-  zle backward-kill-word
-}
-zle -N backward-kill-dir
-
-bindkey '^[^?'    backward-kill-word # ⌥-bksp
-bindkey '^[[3;3~' kill-word          # ⌥-del
-
-# }}}
-
 # Aliases {{{
 alias local-postgres="docker run -d --env-file ~/.secrets/dev/.env.pg  -p 5432:5432 -v pgdata:/var/lib/postgresql/data --rm --name local-postgres postgres"
 

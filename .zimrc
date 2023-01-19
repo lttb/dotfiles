@@ -30,6 +30,7 @@ zmodule git-info
 # A heavily reduced, ASCII-only version of the Spaceship and Starship prompts.
 zmodule asciiship
 
+
 #
 # Completion
 #
@@ -39,6 +40,15 @@ zmodule zsh-users/zsh-completions --fpath src
 # Enables and configures smart and extensive tab completion.
 # completion must be sourced after all modules that add completion definitions.
 zmodule completion
+
+zmodule ohmyzsh/ohmyzsh \
+    -f 'lib/history' -s 'lib/history.zsh' \
+    -f 'lib/git' -s 'lib/git.zsh' \
+    -f 'plugins/history' -s 'plugins/history/history.plugin.zsh' \
+    -f 'plugins/git' -s 'plugins/git/git.plugin.zsh' \
+    -f 'plugins/fast-syntax-highlighting' -s 'plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh'
+
+zmodule marlonrichert/zsh-edit
 
 #
 # Modules that must be initialized last
@@ -53,11 +63,4 @@ zmodule zsh-users/zsh-history-substring-search
 # Fish-like autosuggestions for Zsh.
 zmodule zsh-users/zsh-autosuggestions
 # }}} End configuration added by Zim install
-
-zmodule ohmyzsh/ohmyzsh \
-    -f 'lib/history' -s 'lib/history.zsh' \
-    -f 'lib/git' -s 'lib/git.zsh' \
-    -f 'plugins/history' -s 'plugins/history/history.plugin.zsh' \
-    -f 'plugins/git' -s 'plugins/git/git.plugin.zsh' \
-    -f 'plugins/fast-syntax-highlighting' -s 'plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh'
 
