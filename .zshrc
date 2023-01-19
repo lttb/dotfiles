@@ -215,6 +215,6 @@ export FZF_DEFAULT_OPTS=" \
 
 # }}}
 
-eval "$(fnm env)"
+eval "$(fnm env --use-on-cd --log-level=quiet)"
 
 eval "$(zoxide init --cmd j zsh)"
