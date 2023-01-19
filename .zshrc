@@ -30,7 +30,7 @@ bindkey -v
 #SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
 
 # Remove path separator from WORDCHARS.
-WORDCHARS=${WORDCHARS//[\/\(\)-]}
+WORDCHARS=${WORDCHARS//[\/\(\)\-]}
 
 # -----------------
 # Zim configuration
@@ -145,7 +145,10 @@ backward-kill-dir () {
   zle backward-kill-word
 }
 zle -N backward-kill-dir
-bindkey '^[^?' backward-kill-dir # ⌥-bksp
+
+bindkey '^[^?'    backward-kill-word # ⌥-bksp
+bindkey '^[[3;3~' kill-word          # ⌥-del
+
 # }}}
 
 # Aliases {{{
