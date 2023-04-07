@@ -218,3 +218,4 @@ if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then . '~/google-cloud-sdk/co
 eval "$(fnm env --use-on-cd --log-level=quiet)"
 
 eval "$(zoxide init --cmd j zsh)"
+

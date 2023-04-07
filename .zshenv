@@ -35,4 +35,13 @@ export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.local/share/neovim/bin
 
+# pnpm
+export PNPM_HOME="$HOME/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
 # }}}
+
