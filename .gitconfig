@@ -16,8 +16,8 @@
 
 [delta]
   navigate = true  # use n and N to move between diff sections
-  light = true
-  ; syntax-theme = Catppuccin-frappe
+  light = false
+  syntax-theme = Catppuccin-frappe
 
 [merge]
 	conflictstyle = diff3
@@ -28,7 +28,7 @@
 [pull]
 	rebase = true
 [credential]
-	helper = 
+	helper =
 	helper = /usr/local/share/gcm-core/git-credential-manager
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
