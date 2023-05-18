@@ -16,8 +16,8 @@
 
 [delta]
   navigate = true  # use n and N to move between diff sections
-  light = false
-  syntax-theme = Catppuccin-frappe
+  light = true
+  syntax-theme = GitHub
 
 [merge]
 	conflictstyle = diff3
