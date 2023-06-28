@@ -18,7 +18,7 @@ echo 'Preparing MacOS...'
 osascript -e 'tell application "System Preferences" to quit'
 
 # install xcode tools
-xcode-select --install || echo 'xcode tools are already installed';
+xcode-select --install || echo '✅ xcode tools are already installed';
 
 # enable keyboard navigation in os applications with tab/shift+tab
 defaults write -g AppleKeyboardUIMode -int 2 \
@@ -31,7 +31,7 @@ defaults write -g KeyRepeat -int 2 \
     && echo '✅ key repeat is increased' \
     || echo '❗️ Could not set up key repeat speed';
 
-echo 'MacOS preparation is done'
+echo '💻 MacOS preparation is done'
 
 #}}}
 
@@ -59,7 +59,7 @@ fi
 # install npm packages
 if command -v npm >/dev/null 2>&1; then
     echo "Installing global npm packages"
-    npm i -g arweave-deploy lerna serve ts-node vercel zx
+    npm i -g serve ts-node vercel
 fi
 
-	
+
