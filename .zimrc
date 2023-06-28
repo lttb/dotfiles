@@ -45,8 +45,9 @@ zmodule ohmyzsh/ohmyzsh \
     -f 'lib/history' -s 'lib/history.zsh' \
     -f 'lib/git' -s 'lib/git.zsh' \
     -f 'plugins/history' -s 'plugins/history/history.plugin.zsh' \
-    -f 'plugins/git' -s 'plugins/git/git.plugin.zsh' \
-    -f 'plugins/fast-syntax-highlighting' -s 'plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh'
+    -f 'plugins/git' -s 'plugins/git/git.plugin.zsh'
+
+zmodule zdharma-continuum/fast-syntax-highlighting
 
 zmodule marlonrichert/zsh-edit
 
