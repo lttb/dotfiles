@@ -26,20 +26,28 @@ cask "meetingbar"
 
 tap "homebrew/cask-fonts"
 cask "font-hack-nerd-font"
+cask "font-fira-code"
 
 tap "microsoft/git"
 cask "git-credential-manager-core"
+
+cask "mos"
 
 # brew "alt-tab"
 
 brew "neovim"
 brew "broot"
+brew "zx"
 brew "jq"
 
 brew "sops"
 brew "gh"
-brew "autojump"
+brew "git-lfs"
+brew "gnu-sed"
+
+# brew "autojump"
 brew "zoxide"
+
 brew "fzf"
 brew "fd"
 brew "ripgrep"
@@ -60,4 +68,6 @@ brew "pulumi"
 brew "git-delta"
 brew "jesseduffield/lazygit/lazygit"
 
-brew "qmk/qmk/qmk"
+brew "koekeishiya/formulae/yabai"
+
+# brew "qmk/qmk/qmk"
