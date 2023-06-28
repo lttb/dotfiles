@@ -2,7 +2,8 @@
   path = ~/.config/git/private/.gitconfig
 
 [user]
-	name = lttb
+	name = Artur Kenzhaev
+	email = kenzhaev.artur@gmail.com
 
 [push]
 	default = current
@@ -27,11 +28,13 @@
 
 [pull]
 	rebase = true
-[credential]
-	helper =
-	helper = /usr/local/share/gcm-core/git-credential-manager
+
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
+
+[credential]
+	helper =
+	helper = /usr/local/share/gcm-core/git-credential-manager
