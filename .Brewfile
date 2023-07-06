@@ -72,3 +72,5 @@ brew "jesseduffield/lazygit/lazygit"
 brew "koekeishiya/formulae/yabai"
 
 # brew "qmk/qmk/qmk"
+
+brew MonitorControl
