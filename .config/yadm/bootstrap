@@ -31,6 +31,11 @@ defaults write -g KeyRepeat -int 2 \
     && echo '✅ key repeat is increased' \
     || echo '❗️ Could not set up key repeat speed';
 
+# repeate keys on hold in vscode
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false \
+    && echo '✅ key repeat is enabled in vscode' \
+    || echo '❗️ Could not set up key repeat in vscode';
+
 echo '💻 MacOS preparation is done'
 
 #}}}
