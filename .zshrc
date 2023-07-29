@@ -220,3 +220,13 @@ eval "$(fnm env --use-on-cd --log-level=quiet)"
 eval "$(zoxide init --cmd j zsh)"
 
 source ~/.config/broot/launcher/bash/br
+
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/ruby/lib/pkgconfig"
+
+export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+export PATH="$PATH:$GEM_HOME/bin"
+
+
