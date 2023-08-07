@@ -1,5 +1,8 @@
 # vim:fileencoding=utf-8:foldmethod=marker
 
+autoload -U +X bashcompinit && bashcompinit
+autoload -U +X compinit && compinit
+
 # Start configuration added by Zim install {{{
 #
 # User configuration sourced by interactive shells
@@ -230,3 +233,4 @@ export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 export PATH="$PATH:$GEM_HOME/bin"
 
 
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
