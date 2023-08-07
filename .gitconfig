@@ -14,7 +14,7 @@
 
 [delta]
   navigate = true  # use n and N to move between diff sections
-  light = false
+  light = true
   syntax-theme = ansi
 
 [merge]
