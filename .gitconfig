@@ -38,3 +38,5 @@
 [include]
   path = ~/.config/git/private/.gitconfig
 
+[init]
+	defaultBranch = main
