@@ -1,7 +1,7 @@
 # vim:fileencoding=utf-8:foldmethod=marker
 
 autoload -U +X bashcompinit && bashcompinit
-autoload -U +X compinit && compinit
+# autoload -U +X compinit && compinit
 
 # Start configuration added by Zim install {{{
 #
@@ -162,7 +162,11 @@ alias gi="gitui -t themes/catppuccin/theme/frappe.ron"
 
 # Functions {{{
 
-code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+safe_source() {
+  if [ -f "$1" ]; then . "$1"; fi
+}
+
+code() { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 
 gob() {
     branch_search="$(\
@@ -197,12 +201,6 @@ ybc() {
 
 # GCP {{{
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '~/google-cloud-sdk/path.zsh.inc' ]; then . '~/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then . '~/google-cloud-sdk/completion.zsh.inc'; fi
-
 # }}}
 
 # fzf {{{
@@ -222,15 +220,13 @@ eval "$(fnm env --use-on-cd --log-level=quiet)"
 
 eval "$(zoxide init --cmd j zsh)"
 
-source ~/.config/broot/launcher/bash/br
+safe_source ${HOME}/.config/broot/launcher/bash/br
 
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
-export PKG_CONFIG_PATH="/opt/homebrew/opt/ruby/lib/pkgconfig"
+# The next line updates PATH for the Google Cloud SDK.
+safe_source '~/google-cloud-sdk/path.zsh.inc'
 
-export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
-export PATH="$PATH:$GEM_HOME/bin"
+# The next line enables shell command completion for gcloud.
+safe_source "${HOME}/google-cloud-sdk/completion.zsh.inc"
 
+safe_source "${HOME}/.secrets/private.zsh"
 
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"

@@ -35,6 +35,8 @@ export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.local/share/neovim/bin
 
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
 # pnpm {{{
 export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
@@ -50,8 +52,12 @@ export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
 export PKG_CONFIG_PATH="/opt/homebrew/opt/ruby/lib/pkgconfig"
 # }}}
 
-export GEM_HOME=$HOME/.gem
-export PATH=$GEM_HOME/bin:$PATH
+export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+export PATH="$PATH:$GEM_HOME/bin"
 
 # }}}
+
+
+
+
 
