@@ -49,7 +49,7 @@ zmodule ohmyzsh/ohmyzsh \
 
 zmodule zdharma-continuum/fast-syntax-highlighting
 
-zmodule marlonrichert/zsh-edit
+zmodule lttb/zsh-edit
 
 #
 # Modules that must be initialized last
