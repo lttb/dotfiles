@@ -151,7 +151,7 @@ alias d='\
 
 alias cl="clear"
 
-alias nv="neovide --frame buttonless ."
+alias nv="neovide ."
 
 alias ssh="kitty +kitten ssh"
 
