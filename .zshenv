@@ -55,6 +55,8 @@ export PKG_CONFIG_PATH="/opt/homebrew/opt/ruby/lib/pkgconfig"
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 export PATH="$PATH:$GEM_HOME/bin"
 
+export PATH="$PATH:$HOME/.yarn/bin"
+
 # }}}
 
 
