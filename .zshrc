@@ -223,10 +223,12 @@ eval "$(zoxide init --cmd j zsh)"
 safe_source ${HOME}/.config/broot/launcher/bash/br
 
 # The next line updates PATH for the Google Cloud SDK.
-safe_source '~/google-cloud-sdk/path.zsh.inc'
+# safe_source '~/google-cloud-sdk/path.zsh.inc'
+safe_source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
 
 # The next line enables shell command completion for gcloud.
-safe_source "${HOME}/google-cloud-sdk/completion.zsh.inc"
+# safe_source "${HOME}/google-cloud-sdk/completion.zsh.inc"
+safe_source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 
 safe_source "${HOME}/.secrets/private.zsh"
 
