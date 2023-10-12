@@ -158,6 +158,8 @@ alias ssh="kitty +kitten ssh"
 alias lg="lazygit"
 alias gi="gitui -t themes/catppuccin/theme/frappe.ron"
 
+alias yarn-auth='f(){npm_config_registry=https://registry.npmjs.org npx google-artifactregistry-auth};f'
+
 # }}}
 
 # Functions {{{
