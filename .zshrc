@@ -147,7 +147,7 @@ alias local-postgres="docker run -d --env-file ~/.secrets/dev/.env.pg  -p 5432:5
 alias d='\
     GIT_DIR=$HOME/.local/share/yadm/repo.git \
     GIT_WORK_TREE=$HOME \
-    nvim -- ":cd ~"'
+    nvim -c ":cd ~"'
 
 alias cl="clear"
 
