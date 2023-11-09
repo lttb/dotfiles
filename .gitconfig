@@ -7,15 +7,18 @@
 	autoSetupRemote = true
 
 [core]
-  pager = delta
+  pager = git delta
   ignorecase = false
 
 [interactive]
-  diffFilter = delta --color-only
+  diffFilter = git delta --color-only
 
 [delta]
   navigate = true  # use n and N to move between diff sections
   syntax-theme = ansi
+
+[alias]
+  delta = !delta $(defaults read -g AppleInterfaceStyle &>/dev/null || echo --light)
 
 [merge]
 	conflictstyle = diff3
@@ -42,8 +45,8 @@
 [credential "https://gist.github.com"]
 	helper =
 	helper = !/opt/homebrew/bin/gh auth git-credential
-[credential]
-	helper =
-	helper = /usr/local/bin/git-credential-manager
 [advice]
 	addIgnoredFile = false
+[credential]
+	helper =
+	helper = /usr/local/share/gcm-core/git-credential-manager
