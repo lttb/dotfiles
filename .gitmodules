@@ -12,6 +12,9 @@
 [submodule ".config/bat/themes/catppuccin"]
 	path = .config/bat/themes/catppuccin
 	url = git@github.com:catppuccin/bat.git
-[submodule ".config/kitty/kitty-kitten-search"]
-	path = .config/kitty/kitty-kitten-search
+[submodule ".config/kitty/kittens/kitty-kitten-search"]
+	path = .config/kitty/kittens/kitty-kitten-search
 	url = git@github.com:trygveaa/kitty-kitten-search.git
+[submodule ".config/kitty/kittens/vim-kitty-navigator"]
+	path = .config/kitty/kittens/vim-kitty-navigator
+	url = git@github.com:knubie/vim-kitty-navigator.git
