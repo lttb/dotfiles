@@ -33,7 +33,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$HOME/.local/bin
-export PATH=$PATH:$HOME/.local/share/neovim/bin
+export PATH=$PATH:$HOME/.local/share/bob/nvim-bin
 
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
