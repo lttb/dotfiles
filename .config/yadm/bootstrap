@@ -67,4 +67,5 @@ if command -v npm >/dev/null 2>&1; then
     npm i -g serve ts-node vercel
 fi
 
-
+# configure fzf
+source "$(brew --prefix)/fzf/install"
