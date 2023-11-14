@@ -214,6 +214,13 @@ ybc() {
 # --color=fg:#c6d0f5,header:#e78284,info:#ca9ee6,pointer:#f2d5cf \
 # --color=marker:#f2d5cf,fg+:#c6d0f5,prompt:#ca9ee6,hl+:#e78284"
 
+export FZF_DEFAULT_OPTS="
+	--color=fg:#797593,bg:#faf4ed,hl:#d7827e
+	--color=fg+:#575279,bg+:#f2e9e1,hl+:#d7827e
+	--color=border:#dfdad9,header:#286983,gutter:#faf4ed
+	--color=spinner:#ea9d34,info:#56949f,separator:#dfdad9
+	--color=pointer:#907aa9,marker:#b4637a,prompt:#797593"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # }}}
