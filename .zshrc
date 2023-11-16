@@ -141,6 +141,8 @@ HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='fg=red,bold'
 
 source ${HOME}/.config/zsh/prompt.zsh
 
+bindkey -s '^F' 'ji^M'
+
 # Aliases {{{
 alias local-postgres="docker run -d --env-file ~/.secrets/dev/.env.pg  -p 5432:5432 -v pgdata:/var/lib/postgresql/data --rm --name local-postgres postgres"
 
