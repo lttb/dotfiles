@@ -15,10 +15,10 @@
 
 [delta]
   navigate = true  # use n and N to move between diff sections
-  syntax-theme = ansi
+  syntax-theme = Nord
 
 [alias]
-  delta = !delta $(defaults read -g AppleInterfaceStyle &>/dev/null || echo --light)
+  delta = !delta --$($THEME_MODE || 'light')
 
 [merge]
 	conflictstyle = diff3
