@@ -15,10 +15,10 @@
 
 [delta]
   navigate = true  # use n and N to move between diff sections
-  syntax-theme = Nord
+  syntax-theme = base16
 
 [alias]
-  delta = !delta --$($THEME_MODE || 'light')
+  delta = !delta --light
 
 [merge]
 	conflictstyle = diff3
