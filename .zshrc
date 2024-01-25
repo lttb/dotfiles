@@ -217,12 +217,12 @@ ybc() {
 # --color=marker:#f2d5cf,fg+:#c6d0f5,prompt:#ca9ee6,hl+:#e78284"
 
 # rose-pine light
-export FZF_DEFAULT_OPTS="
-	--color=fg:#797593,bg:#faf4ed,hl:#d7827e
-	--color=fg+:#575279,bg+:#f2e9e1,hl+:#d7827e
-	--color=border:#dfdad9,header:#286983,gutter:#faf4ed
-	--color=spinner:#ea9d34,info:#56949f,separator:#dfdad9
-	--color=pointer:#907aa9,marker:#b4637a,prompt:#797593"
+# export FZF_DEFAULT_OPTS="
+# 	--color=fg:#797593,bg:#faf4ed,hl:#d7827e
+# 	--color=fg+:#575279,bg+:#f2e9e1,hl+:#d7827e
+# 	--color=border:#dfdad9,header:#286983,gutter:#faf4ed
+# 	--color=spinner:#ea9d34,info:#56949f,separator:#dfdad9
+# 	--color=pointer:#907aa9,marker:#b4637a,prompt:#797593"
 
 # rose-pine dark
 # export FZF_DEFAULT_OPTS="
@@ -231,6 +231,13 @@ export FZF_DEFAULT_OPTS="
 # 	--color=border:#403d52,header:#31748f,gutter:#191724
 # 	--color=spinner:#f6c177,info:#9ccfd8,separator:#403d52
 # 	--color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa"
+
+# github light
+# export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS" \
+#   --color=fg:#656d76,bg:#ffffff,hl:#ffffff \
+#   --color=fg+:#1F2328,bg+:#deeeff,hl+:#953800 \
+#   --color=info:#9a6700,prompt:#0969da,pointer:#8250df \
+#   --color=marker:#1a7f37,spinner:#24292f,header:#eff1f3"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
