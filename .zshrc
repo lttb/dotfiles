@@ -153,7 +153,7 @@ alias d='\
 
 alias cl="clear"
 
-alias nv="neovide ."
+alias nv="neovide --frame transparent --title-hidden ."
 
 alias ssh="kitty +kitten ssh"
 
@@ -259,3 +259,4 @@ safe_source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 
 safe_source "${HOME}/.secrets/private.zsh"
 
+export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
