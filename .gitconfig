@@ -18,7 +18,7 @@
   syntax-theme = ansi
 
 [alias]
-  delta = !delta # --light
+  delta = !delta --light
 
 [merge]
 	conflictstyle = diff3
@@ -34,19 +34,22 @@
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
+
 [include]
   path = ~/.config/git/private/.gitconfig
 
 [init]
 	defaultBranch = main
+
+[advice]
+	addIgnoredFile = false
+
 [credential "https://github.com"]
 	helper =
 	helper = !/opt/homebrew/bin/gh auth git-credential
 [credential "https://gist.github.com"]
 	helper =
 	helper = !/opt/homebrew/bin/gh auth git-credential
-[advice]
-	addIgnoredFile = false
 [credential]
 	helper =
 	helper = /usr/local/share/gcm-core/git-credential-manager
