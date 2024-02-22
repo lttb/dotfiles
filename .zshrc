@@ -260,3 +260,7 @@ safe_source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 safe_source "${HOME}/.secrets/private.zsh"
 
 export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
+
+# bun completions
+[ -s "/opt/homebrew/Cellar/bun/1.0.23/share/zsh/site-functions/_bun" ] && source "/opt/homebrew/Cellar/bun/1.0.23/share/zsh/site-functions/_bun"
+
