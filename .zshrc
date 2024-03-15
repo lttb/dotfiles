@@ -264,3 +264,5 @@ export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 
 # bun completions
 [ -s "/opt/homebrew/Cellar/bun/1.0.23/share/zsh/site-functions/_bun" ] && source "/opt/homebrew/Cellar/bun/1.0.23/share/zsh/site-functions/_bun"
+
+export PATH="$HOME/.bun/bin:$PATH"
