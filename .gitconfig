@@ -11,7 +11,7 @@
   ignorecase = false
 
 [interactive]
-  diffFilter = delta --color-only
+  diffFilter = delta
 
 [delta]
   navigate = true  # use n and N to move between diff sections
