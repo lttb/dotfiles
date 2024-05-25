@@ -17,7 +17,7 @@ preexec() {
       'status' '%S%I%i%A%B' \
       'prompt' '%%F{245}%b%c%s${(e)git_info[status]:+" %F{245}[${(e)git_info[status]}]"}%f%%b'
 
-  local styled_wd="%B%F{15}%~"
+  local styled_wd="%B%F{black}%~"
   local styled_duration_info="${VIRTUAL_ENV:+" via %B%F{yellow}${VIRTUAL_ENV:t}%b%f"}${duration_info}"
   local styled_git_branch='%f%b${(e)git_info[prompt]}'
   local styled_error="%B%(?..%F{124}∙)%f%b"
