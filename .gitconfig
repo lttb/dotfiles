@@ -15,7 +15,7 @@
 
 [delta]
   navigate = true  # use n and N to move between diff sections
-  syntax-theme = gruvbox-light
+  syntax-theme = ansi
 
 ; [alias]
 ;   delta = !delta --light
