@@ -247,7 +247,7 @@ export FZF_DEFAULT_OPTS="
 	--color=spinner:#ea9d34,info:#56949f,separator:#dfdad9
 	--color=pointer:#907aa9,marker:#b4637a,prompt:#797593"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
 
 # }}}
 
@@ -267,10 +267,6 @@ safe_source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 
 safe_source "${HOME}/.secrets/private.zsh"
 
-export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
-export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
-
 # bun completions
 [ -s "/opt/homebrew/Cellar/bun/1.0.23/share/zsh/site-functions/_bun" ] && source "/opt/homebrew/Cellar/bun/1.0.23/share/zsh/site-functions/_bun"
 
-export PATH="$HOME/.bun/bin:$PATH"

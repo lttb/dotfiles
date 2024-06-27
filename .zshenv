@@ -57,6 +57,10 @@ export PATH="$PATH:$GEM_HOME/bin"
 
 export PATH="$PATH:$HOME/.yarn/bin"
 
+export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+export PATH="$HOME/.bun/bin:$PATH"
+
 # }}}
 
 
