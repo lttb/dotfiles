@@ -153,7 +153,7 @@ alias d='\
 
 alias cl="clear"
 
-alias nv="neovide --frame transparent --title-hidden ."
+alias nv="neovide --frame transparent --title-hidden"
 
 alias ssh="kitty +kitten ssh"
 
