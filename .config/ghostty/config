@@ -2,6 +2,8 @@ font-size = 15
 font-thicken = true
 
 adjust-cell-height = 20%
+adjust-underline-position = 2
+adjust-underline-thickness = 2
 
 window-padding-x = 10
 window-padding-balance = true
