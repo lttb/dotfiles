@@ -25,8 +25,6 @@ cask "figma"
 cask "meetingbar"
 
 tap "homebrew/cask-fonts"
-cask "font-hack-nerd-font"
-cask "font-fira-code"
 
 tap "microsoft/git"
 cask "git-credential-manager-core"
