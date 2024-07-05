@@ -8,7 +8,8 @@
 // from the command palette or from `Zed` application menu.
 {
   "buffer_font_size": 15,
-  "theme": "Sandcastle",
+  "ui_font_family": "JetBrains Mono",
+  "theme": "Github Light",
   "format_on_save": "language_server",
   "vim_mode": true,
   "hover_popover_enabled": true,
