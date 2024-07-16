@@ -9,5 +9,6 @@ adjust-underline-thickness = 2
 window-padding-x = 10
 window-padding-balance = true
 
-macos-option-as-alt = true
+macos-window-shadow = false
 
+background = #24282e
