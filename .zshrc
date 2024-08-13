@@ -240,12 +240,12 @@ ybc() {
 #   --color=marker:#1a7f37,spinner:#24292f,header:#eff1f3"
 
 # custom light
-# export FZF_DEFAULT_OPTS="
-# 	--color=fg:#797593,bg:#ffffff,hl:#d7827e
-# 	--color=fg+:#575279,bg+:#f2e9e1,hl+:#d7827e
-# 	--color=border:#dfdad9,header:#286983,gutter:#faf4ed
-# 	--color=spinner:#ea9d34,info:#56949f,separator:#dfdad9
-# 	--color=pointer:#907aa9,marker:#b4637a,prompt:#797593"
+export FZF_DEFAULT_OPTS="
+	--color=fg:#797593,bg:#ffffff,hl:#d7827e
+	--color=fg+:#575279,bg+:#f2e9e1,hl+:#d7827e
+	--color=border:#dfdad9,header:#286983,gutter:#faf4ed
+	--color=spinner:#ea9d34,info:#56949f,separator:#dfdad9
+	--color=pointer:#907aa9,marker:#b4637a,prompt:#797593"
 
 source <(fzf --zsh)
 
