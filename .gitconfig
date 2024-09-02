@@ -50,9 +50,9 @@
 [credential "https://gist.github.com"]
 	helper =
 	helper = !/opt/homebrew/bin/gh auth git-credential
-[credential]
-	helper =
-	helper = /usr/local/share/gcm-core/git-credential-manager
 [diff "lockb"]
 	textconv = bun
 	binary = true
+[credential]
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
