@@ -11,4 +11,5 @@ window-padding-balance = true
 
 macos-window-shadow = false
 
-background = #24282e
+# background = #24282e
+theme = "zenwritten_light"
