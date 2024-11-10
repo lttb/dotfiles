@@ -270,3 +270,6 @@ safe_source "${HOME}/.secrets/private.zsh"
 # bun completions
 [ -s "/opt/homebrew/Cellar/bun/1.0.23/share/zsh/site-functions/_bun" ] && source "/opt/homebrew/Cellar/bun/1.0.23/share/zsh/site-functions/_bun"
 
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"

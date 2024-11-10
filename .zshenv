@@ -11,6 +11,7 @@
 
 . "$HOME/.cargo/env"
 
+
 # make term compatible with zsh-notify
 # export TERM_PROGRAM="Apple_Terminal"
 
@@ -31,9 +32,6 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
 # export PATH=$JAVA_HOME/bin:$PATH
 
-export PATH=$PATH:$HOME/.cargo/bin
-export PATH=$PATH:$HOME/.local/bin
-export PATH=$PATH:$HOME/.local/share/bob/nvim-bin
 
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
