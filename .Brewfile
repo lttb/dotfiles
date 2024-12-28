@@ -1,5 +1,5 @@
 brew "git"
-brew "zsh"
+# brew "zsh"
 
 cask "rectangle"
 cask "karabiner-elements"
@@ -71,4 +71,6 @@ brew "koekeishiya/formulae/yabai"
 
 # brew "qmk/qmk/qmk"
 
-brew MonitorControl
+cask MonitorControl
+
+brew sheldon
