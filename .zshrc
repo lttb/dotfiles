@@ -1,5 +1,7 @@
 # vim:fileencoding=utf-8:foldmethod=marker
 
+[ -z "$ZPROF" ] || zmodload zsh/zprof
+
 eval "$(sheldon source)"
 
 bindkey -s '^F' 'ji^M'
@@ -13,3 +15,4 @@ zsh-defer _evalcache fzf --zsh
 
 zsh-defer safe_source "${HOME}/.secrets/private.zsh"
 
+[ -z "$ZPROF" ] || zprof
