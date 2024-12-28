@@ -1,20 +1,5 @@
 # vim:fileencoding=utf-8:foldmethod=marker
 
-# Start configuration added by Zim install {{{
-#
-# User configuration sourced by all invocations of the shell
-#
-
-# Define Zim location
-: ${ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim}
-# }}} End configuration added by Zim install
-
-. "$HOME/.cargo/env"
-
-
-# make term compatible with zsh-notify
-# export TERM_PROGRAM="Apple_Terminal"
-
 export NVIM_LISTEN_ADDRESS="/tmp/nvimsocket nvim"
 
 export EDITOR="nvim"
@@ -32,6 +17,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
 # export PATH=$JAVA_HOME/bin:$PATH
 
+export PATH=/opt/homebrew/bin:$PATH
 
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
@@ -50,15 +36,21 @@ export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
 export PKG_CONFIG_PATH="/opt/homebrew/opt/ruby/lib/pkgconfig"
 # }}}
 
-export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
-export PATH="$PATH:$GEM_HOME/bin"
+# export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+# export PATH="$PATH:$GEM_HOME/bin"
 
 export PATH="$PATH:$HOME/.yarn/bin"
 
 export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+
 export PATH="$HOME/.bun/bin:$PATH"
 
+export PATH="$HOME/.cargo/bin:$PATH"
+
+export PATH="$HOME/.local/bin:$PATH"
+
+export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 # }}}
 
 
