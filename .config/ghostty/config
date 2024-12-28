@@ -12,4 +12,14 @@ window-padding-balance = true
 macos-window-shadow = false
 
 # background = #24282e
-theme = "zenwritten_light"
+# theme = "zenwritten_light"
+
+window-save-state = always
+window-padding-balance = true
+window-padding-color = extend-always
+macos-titlebar-style = tabs
+macos-window-shadow = false
+
+cursor-style = bar
+shell-integration-features = no-cursor
+mouse-hide-while-typing = true
