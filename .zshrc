@@ -2,7 +2,6 @@
 
 eval "$(sheldon source)"
 
-bindkey -v
 bindkey -s '^F' 'ji^M'
 
 WORDCHARS=${WORDCHARS//[\/]}
