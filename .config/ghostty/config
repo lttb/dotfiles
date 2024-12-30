@@ -14,12 +14,15 @@ macos-window-shadow = false
 # background = #24282e
 # theme = "zenwritten_light"
 
-window-save-state = always
 window-padding-balance = true
-window-padding-color = extend-always
+window-padding-color = extend
 macos-titlebar-style = tabs
 macos-window-shadow = false
+macos-option-as-alt = true
 
 cursor-style = bar
-shell-integration-features = no-cursor
 mouse-hide-while-typing = true
+
+quick-terminal-position = center
+keybind = global:shift+cmd+j=toggle_quick_terminal
+
