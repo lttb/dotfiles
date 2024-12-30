@@ -100,3 +100,7 @@ inline = 'zsh-defer _evalcache fzf --zsh'
 
 [plugins.fnm]
 inline = 'zsh-defer _evalcache fnm env --use-on-cd --log-level=quiet'
+
+[plugins.ls_colors]
+github = "trapd00r/LS_COLORS"
+apply = ["defer"]
