@@ -17,6 +17,9 @@ defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file 
 
 [plugins]
 
+[plugins.prompt]
+local = "~/.config/zsh/instant-prompt"
+
 # IMPORTANT: the zsh-defer plugin definition should be placed before any plugins
 # that will use the defer template. Sheldon always processes plugins in the order
 # they are defined in the config file.
@@ -26,11 +29,19 @@ github = "romkatv/zsh-defer"
 [plugins.evalcache]
 github = "mroth/evalcache"
 
-[plugins.git-prompt]
-github = "woefe/git-prompt.zsh"
+[plugins.utils]
+local = "~/.config/zsh/utils"
 
-[plugins.prompt]
-local = "~/.config/zsh/prompt"
+[plugins.git-prompt]
+github = "lttb/git-prompt.zsh"
+branch = "main"
+use = ["git-prompt.zsh"]
+apply = ["defer"]
+[plugins.git-prompt.hooks]
+pre = '''
+ZSH_GIT_PROMPT_NO_PROMPT=1
+'''
+
 
 [plugins.oh-my-zsh]
 github = "ohmyzsh/ohmyzsh"
@@ -46,8 +57,8 @@ github = "zsh-users/zsh-autosuggestions"
 apply = ["defer"]
 [plugins.zsh-autosuggestions.hooks]
 post = '''
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
-'''
+ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
+ '''
 
 [plugins.zsh-syntax-highlighting]
 github = "zsh-users/zsh-syntax-highlighting"
@@ -58,29 +69,34 @@ github = "zsh-users/zsh-history-substring-search"
 apply = ["defer"]
 [plugins.zsh-history-substring-search.hooks]
 post = '''
-HISTORY_IGNORE="*'z#*'"
+ HISTORY_IGNORE="*'z#*'"
 
-HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
-HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='fg=102,bold'
-HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='fg=red,bold'
+ HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
+ HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='fg=102,bold'
+ HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='fg=red,bold'
 
-# Bind ^[[A/^[[B manually so up/down works both before and after zle-line-init
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
-bindkey '^P' history-substring-search-up
-bindkey '^N' history-substring-search-down
-bindkey -M vicmd 'k' history-substring-search-up
-bindkey -M vicmd 'j' history-substring-search-down
-'''
+ # Bind ^[[A/^[[B manually so up/down works both before and after zle-line-init
+ bindkey '^[[A' history-substring-search-up
+ bindkey '^[[B' history-substring-search-down
+ bindkey '^P' history-substring-search-up
+ bindkey '^N' history-substring-search-down
+ bindkey -M vicmd 'k' history-substring-search-up
+ bindkey -M vicmd 'j' history-substring-search-down
+ '''
 
 [plugins.zsh-edit]
 github = "lttb/zsh-edit"
 apply = ["defer"]
 
-[plugins.utils]
-local = "~/.config/zsh/utils"
-apply = ["defer"]
 
 [plugins.zoxide]
 github = "ajeetdsouza/zoxide"
 apply = ["defer"]
+[plugins.zoxide.hooks]
+post = 'zsh-defer _evalcache zoxide init --cmd j zsh'
+
+[plugins.fzf]
+inline = 'zsh-defer _evalcache fzf --zsh'
+
+[plugins.fnm]
+inline = 'zsh-defer _evalcache fnm env --use-on-cd --log-level=quiet'
