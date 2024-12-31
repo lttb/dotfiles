@@ -6,6 +6,8 @@ export EDITOR="nvim"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 
+export CLICOLOR=1
+
 # PATH {{{
 
 export ANDROID_HOME=$HOME/Library/Android/sdk
