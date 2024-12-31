@@ -32,6 +32,12 @@ github = "mroth/evalcache"
 [plugins.utils]
 local = "~/.config/zsh/utils"
 
+[plugins.compinit]
+inline = 'autoload -Uz compinit && zsh-defer compinit'
+
+[plugins.colors]
+inline = 'autoload -Uz colors && zsh-defer colors'
+
 [plugins.git-prompt]
 github = "lttb/git-prompt.zsh"
 branch = "main"
@@ -46,10 +52,6 @@ ZSH_GIT_PROMPT_NO_PROMPT=1
 [plugins.oh-my-zsh]
 github = "ohmyzsh/ohmyzsh"
 use = ["lib/history.zsh", "plugins/git/git.plugin.zsh"]
-apply = ["defer"]
-
-[plugins.zsh-completion]
-github = "zsh-users/zsh-completions"
 apply = ["defer"]
 
 [plugins.zsh-autosuggestions]
@@ -88,6 +90,9 @@ post = '''
 github = "lttb/zsh-edit"
 apply = ["defer"]
 
+[plugins.fzf-tab]
+github = "Aloxaf/fzf-tab"
+apply = ["defer"]
 
 [plugins.zoxide]
 github = "ajeetdsouza/zoxide"
