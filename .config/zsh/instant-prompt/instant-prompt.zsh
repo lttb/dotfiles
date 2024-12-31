@@ -1,18 +1,9 @@
-# Cache the terminfo strings
-local terminfo_down=$terminfo[cud1]
-local terminfo_up=$terminfo[cuu1]
-
-# Precompute the fixed part of the prompt
-local PS1_static="%{$terminfo_down$terminfo_up$terminfo[sc]$terminfo_down%}"
-
-# Function to generate the dynamic part of the prompt
-prompt_dir() {
-  print -Pn $'\n%F{245}%~'
-}
-
-# Set the prompt
 setopt prompt_subst
-PS1="${PS1_static}\$(prompt_dir)%{$terminfo[rc]%}"
+
+terminfo_down_sc=$terminfo[cud1]$terminfo[cuu1]$terminfo[sc]$terminfo[cud1]
+PS1_2="
+%F{245}%~"
+PS1="%{$terminfo_down_sc$PS1_2$terminfo[rc]%}"
 
 preexec() {
   # In the second line of the prompt $psvar[12] is read
@@ -22,8 +13,6 @@ preexec() {
 
   RPROMPT=''
 }
-
-precmd() {}
 
 zle-line-init() {
   emulate -L zsh
