@@ -106,6 +106,12 @@ inline = 'zsh-defer _evalcache fzf --zsh'
 [plugins.fnm]
 inline = 'zsh-defer _evalcache fnm env --use-on-cd --log-level=quiet'
 
-[plugins.ls_colors]
-github = "trapd00r/LS_COLORS"
-apply = ["defer"]
+# @see "trapd00r/LS_COLORS"
+[plugins.vivid]
+inline = '''
+function get_ls_colors() {
+  echo "export LS_COLORS=\"$(vivid generate nord)\""
+}
+
+zsh-defer _evalcache get_ls_colors
+'''
