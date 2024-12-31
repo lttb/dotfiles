@@ -1,4 +1,3 @@
-# vim:fileencoding=utf-8:foldmethod=marker
 
 export NVIM_LISTEN_ADDRESS="/tmp/nvimsocket nvim"
 
@@ -18,8 +17,6 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
 # export PATH=$JAVA_HOME/bin:$PATH
-
-export PATH=/opt/homebrew/bin:$PATH
 
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
@@ -48,16 +45,14 @@ export PATH="$PATH:$HOME/.yarn/bin"
 export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 
+
+export PATH="$HOME/.local/bin:$PATH"
+
+export PATH=/opt/homebrew/bin:$PATH
+
 export PATH="$HOME/.bun/bin:$PATH"
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
-export PATH="$HOME/.local/bin:$PATH"
-
 export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 # }}}
-
-
-
-
-
