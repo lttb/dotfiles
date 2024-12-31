@@ -29,6 +29,8 @@ case ":$PATH:" in
 esac
 # }}}
 
+export PATH="$HOME/Library/Python/3.9/bin:$PATH"
+
 # ruby {{{
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
