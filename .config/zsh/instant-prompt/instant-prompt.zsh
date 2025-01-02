@@ -27,6 +27,8 @@ PS1_2="
 %F{245}%~"
 PS1="%{$terminfo_down_sc$PS1_2$terminfo[rc]%}"
 
+clear
+
 preexec() {
   # In the second line of the prompt $psvar[12] is read
   PROMPT=$'
