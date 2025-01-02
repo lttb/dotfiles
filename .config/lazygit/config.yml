@@ -1,7 +1,6 @@
 git:
   paging:
-    colorArg: always
-    pager: delta --color-only --paging=never
+    pager: delta --paging=never
 
 gui:
   showIcons: true

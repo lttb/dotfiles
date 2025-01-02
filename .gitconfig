@@ -16,9 +16,10 @@
 [delta]
   navigate = true  # use n and N to move between diff sections
   syntax-theme = ansi
-
-; [alias]
-;   delta = !delta --light
+[delta "light"]
+  light = true
+[delta "dark"]
+  dark = true
 
 [merge]
 	conflictstyle = diff3
@@ -54,5 +55,5 @@
 	textconv = bun
 	binary = true
 [credential]
-	helper = 
+	helper =
 	helper = /usr/local/share/gcm-core/git-credential-manager
