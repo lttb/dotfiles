@@ -51,7 +51,7 @@ ZSH_GIT_PROMPT_NO_PROMPT=1
 
 [plugins.oh-my-zsh]
 github = "ohmyzsh/ohmyzsh"
-use = ["lib/history.zsh", "plugins/git/git.plugin.zsh"]
+use = ["lib/history.zsh", "lib/git.zsh", "plugins/git/git.plugin.zsh"]
 apply = ["defer"]
 
 [plugins.zsh-autosuggestions]
