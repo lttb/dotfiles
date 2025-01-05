@@ -33,6 +33,24 @@ verbs: [
         leave_broot: false
     }
 
+    {
+        invocation: edit
+        key: ctrl-n
+        apply_to: file
+        execution: "nvim +{line} {file}"
+        set_working_dir: true
+        from_shell: true
+    }
+
+    {
+        invocation: edit
+        key: ctrl-n
+        apply_to: directory
+        execution: "nvim --cmd 'cd {directory}'"
+        set_working_dir: true
+        from_shell: true
+    }
+
     # Example 1: launching `tail -n` on the selected file (leaving broot)
     # {
     #     name: tail_lines
