@@ -48,10 +48,9 @@ pre = '''
 ZSH_GIT_PROMPT_NO_PROMPT=1
 '''
 
-
 [plugins.oh-my-zsh]
 github = "ohmyzsh/ohmyzsh"
-use = ["lib/history.zsh", "lib/git.zsh", "plugins/git/git.plugin.zsh"]
+use = ["lib/history.zsh"]
 apply = ["defer"]
 
 [plugins.zsh-autosuggestions]
@@ -105,6 +104,9 @@ inline = 'zsh-defer _evalcache fzf --zsh'
 
 [plugins.fnm]
 inline = 'zsh-defer _evalcache fnm env --use-on-cd --log-level=quiet'
+
+[plugins.broot]
+inline = 'zsh-defer _evalcache broot --print-shell-function zsh'
 
 # @see "trapd00r/LS_COLORS"
 [plugins.vivid]
