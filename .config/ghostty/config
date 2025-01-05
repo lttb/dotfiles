@@ -23,5 +23,18 @@ cursor-style = bar
 mouse-hide-while-typing = true
 
 quick-terminal-position = center
+
 keybind = global:shift+cmd+j=toggle_quick_terminal
+
+keybind = super+w=unbind
+keybind = super+alt+w=close_surface
+keybind = alt+left=unbind
+keybind = alt+right=unbind
+keybind = super+backspace=unbind
+
+# @see https://github.com/ghostty-org/ghostty/discussions/2811
+keybind = unconsumed:super+v=paste_from_clipboard
+keybind = performable:super+c=copy_to_clipboard
+
+keybind = super+enter=unbind
 
