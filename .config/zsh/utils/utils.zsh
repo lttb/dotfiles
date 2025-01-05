@@ -13,6 +13,12 @@ alias nv="neovide --frame transparent --title-hidden"
 
 alias lg="lazygit"
 alias gi="gitui -t themes/catppuccin/theme/frappe.ron"
+
+alias ll="eza --tree --level 1"
+
+# inspired by omz
+alias gst="git status"
+alias ggp="git push"
 # }}}
 
 # Functions {{{

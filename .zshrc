@@ -2,11 +2,13 @@
 
 [ -z "$ZPROF" ] || zmodload zsh/zprof
 
-WORDCHARS=${WORDCHARS//[\/]}
+setopt autocd
 
-source ~/.config/zsh/sheldon.zsh
+WORDCHARS=${WORDCHARS//[\/]/}
 
-safe_source "${HOME}/.secrets/private.zsh"
+source $HOME/.config/zsh/sheldon.zsh
+
+
+safe_source $HOME/.secrets/private.zsh
 
 [ -z "$ZPROF" ] || zprof
-
