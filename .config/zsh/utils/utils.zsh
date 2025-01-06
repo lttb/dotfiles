@@ -5,12 +5,12 @@ alias d='\
     DOTFILES=1 \
     GIT_DIR=$HOME/.local/share/yadm/repo.git \
     GIT_WORK_TREE=$HOME \
-    nvim -c ":cd ~"'
+    nvim -c ":cd ~/.config"'
 alias dd='\
     DOTFILES=1 \
     GIT_DIR=$HOME/.local/share/yadm/repo.git \
     GIT_WORK_TREE=$HOME \
-    nv -- -c ":cd ~"'
+    nv -- -c ":cd ~/.config"'
 
 alias cl="clear"
 
