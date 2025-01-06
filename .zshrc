@@ -8,6 +8,6 @@ WORDCHARS=${WORDCHARS//[\/]/}
 
 source $HOME/.config/zsh/sheldon.zsh
 
-safe_source $HOME/.secrets/private.zsh
+zsh-defer safe_source $HOME/.secrets/private.zsh
 
 [ -z "$ZPROF" ] || zprof
