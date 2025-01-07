@@ -10,10 +10,21 @@
   "theme": "One Dark",
   "buffer_font_size": 15,
   "ui_font_family": "JetBrains Mono",
-  "format_on_save": "language_server",
+  "format_on_save": "on",
   "vim_mode": true,
   "hover_popover_enabled": true,
   "enable_language_server": true,
   "show_completions_on_input": true,
-  "active_pane_magnification": 1
+  "active_pane_magnification": 1,
+  "languages": {
+    "JavaScript": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--stdin-filepath", "{buffer_path}"]
+        }
+      }
+    }
+  }
 }
