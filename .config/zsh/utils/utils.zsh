@@ -24,6 +24,8 @@ alias ll="eza --tree --level 1"
 # inspired by omz
 alias gst="git status"
 alias ggp="git push"
+alias gco="git checkout"
+alias gcam='git commit --all --message'
 # }}}
 
 # Functions {{{
