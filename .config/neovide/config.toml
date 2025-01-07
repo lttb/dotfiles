@@ -1,2 +1,6 @@
 frame        = "transparent"
 title-hidden = true
+
+[font]
+normal = ["JetBrains Mono", "Symbols Nerd Font Mono"]
+size   = 15
