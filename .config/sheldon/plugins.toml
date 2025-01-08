@@ -39,35 +39,35 @@ inline = 'autoload -Uz compinit && zsh-defer compinit'
 inline = 'autoload -Uz colors && zsh-defer colors'
 
 [plugins.git-prompt]
-github = "lttb/git-prompt.zsh"
+apply  = ["defer"]
 branch = "main"
-use = ["git-prompt.zsh"]
-apply = ["defer"]
+github = "lttb/git-prompt.zsh"
+use    = ["git-prompt.zsh"]
 [plugins.git-prompt.hooks]
 pre = '''
 ZSH_GIT_PROMPT_NO_PROMPT=1
 '''
 
 [plugins.oh-my-zsh]
+apply  = ["defer"]
 github = "ohmyzsh/ohmyzsh"
-use = ["lib/history.zsh"]
-apply = ["defer"]
+use    = ["lib/history.zsh"]
 
 [plugins.zsh-autosuggestions]
+apply  = ["defer"]
 github = "zsh-users/zsh-autosuggestions"
-apply = ["defer"]
 [plugins.zsh-autosuggestions.hooks]
 post = '''
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
 '''
 
 [plugins.zsh-syntax-highlighting]
+apply  = ["defer"]
 github = "zsh-users/zsh-syntax-highlighting"
-apply = ["defer"]
 
 [plugins.zsh-history-substring-search]
+apply  = ["defer"]
 github = "zsh-users/zsh-history-substring-search"
-apply = ["defer"]
 [plugins.zsh-history-substring-search.hooks]
 post = '''
 HISTORY_IGNORE="*'z#*'"
@@ -86,16 +86,16 @@ bindkey -M vicmd 'j' history-substring-search-down
 '''
 
 [plugins.zsh-edit]
+apply  = ["defer"]
 github = "lttb/zsh-edit"
-apply = ["defer"]
 
 [plugins.fzf-tab]
+apply  = ["defer"]
 github = "Aloxaf/fzf-tab"
-apply = ["defer"]
 
 [plugins.zoxide]
+apply  = ["defer"]
 github = "ajeetdsouza/zoxide"
-apply = ["defer"]
 [plugins.zoxide.hooks]
 post = 'zsh-defer _evalcache zoxide init --cmd j zsh'
 
