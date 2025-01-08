@@ -1,7 +1,3 @@
-[user]
-	name = Artur Kenzhaev
-	email = kenzhaev.artur@gmail.com
-
 [push]
 	default = current
 	autoSetupRemote = true
@@ -36,9 +32,6 @@
 	required = true
 	clean = git-lfs clean -- %f
 
-[include]
-  path = ~/.config/git/private/.gitconfig
-
 [init]
 	defaultBranch = main
 
@@ -57,3 +50,6 @@
 [credential]
 	helper =
 	helper = /usr/local/share/gcm-core/git-credential-manager
+
+[include]
+  path = ~/.config/git/private/.gitconfig
