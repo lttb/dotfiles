@@ -161,3 +161,9 @@ function get_ls_colors() {
 
 zsh-defer _evalcache get_ls_colors
 '''
+
+[plugins.bun]
+inline = '''
+# bun completions
+zsh-defer safe_source "$HOME/.bun/_bun"
+'''
