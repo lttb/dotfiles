@@ -25,9 +25,11 @@ local = "~/.config/zsh/instant-prompt"
 # they are defined in the config file.
 [plugins.zsh-defer]
 github = "romkatv/zsh-defer"
+rev    = "53a26e287fbbe2dcebb3aa1801546c6de32416fa"
 
 [plugins.evalcache]
 github = "mroth/evalcache"
+tag    = "v1.0.2"
 
 [plugins.utils]
 local = "~/.config/zsh/utils"
@@ -56,6 +58,7 @@ use    = ["lib/history.zsh"]
 [plugins.zsh-autosuggestions]
 apply  = ["defer"]
 github = "zsh-users/zsh-autosuggestions"
+tag    = "v0.7.1"
 [plugins.zsh-autosuggestions.hooks]
 post = '''
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
@@ -64,10 +67,12 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
 [plugins.zsh-syntax-highlighting]
 apply  = ["defer"]
 github = "zsh-users/zsh-syntax-highlighting"
+tag    = "0.8.0"
 
 [plugins.zsh-history-substring-search]
 apply  = ["defer"]
 github = "zsh-users/zsh-history-substring-search"
+tag    = "v1.1.0"
 [plugins.zsh-history-substring-search.hooks]
 post = '''
 HISTORY_IGNORE="*'z#*'"
@@ -92,10 +97,12 @@ github = "lttb/zsh-edit"
 [plugins.fzf-tab]
 apply  = ["defer"]
 github = "Aloxaf/fzf-tab"
+tag    = "v1.1.2"
 
 [plugins.zoxide]
 apply  = ["defer"]
 github = "ajeetdsouza/zoxide"
+tag    = "v0.9.6"
 [plugins.zoxide.hooks]
 post = 'zsh-defer _evalcache zoxide init --cmd j zsh'
 
@@ -166,4 +173,10 @@ zsh-defer _evalcache get_ls_colors
 inline = '''
 # bun completions
 zsh-defer safe_source "$HOME/.bun/_bun"
+'''
+
+[plugins.sheldon]
+inline = '''
+# sheldon completions
+zsh-defer _evalcache sheldon completions --shell zsh
 '''
