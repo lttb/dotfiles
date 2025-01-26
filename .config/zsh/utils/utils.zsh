@@ -1,3 +1,5 @@
+# vim:fileencoding=utf-8:foldmethod=marker
+
 # Aliases {{{
 alias local-postgres="docker run -d --env-file ~/.secrets/dev/.env.pg  -p 5432:5432 -v pgdata:/var/lib/postgresql/data --rm --name local-postgres postgres"
 
@@ -5,12 +7,12 @@ alias d='\
     DOTFILES=1 \
     GIT_DIR=$HOME/.local/share/yadm/repo.git \
     GIT_WORK_TREE=$HOME \
-    nvim -c ":cd ~/.config"'
+    nvim -c ":cd ~"'
 alias dd='\
     DOTFILES=1 \
     GIT_DIR=$HOME/.local/share/yadm/repo.git \
     GIT_WORK_TREE=$HOME \
-    nv -- -c ":cd ~/.config"'
+    nv -- -c ":cd ~"'
 
 alias cl="clear"
 

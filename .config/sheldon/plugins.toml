@@ -94,11 +94,6 @@ bindkey -M vicmd 'j' history-substring-search-down
 apply  = ["defer"]
 github = "lttb/zsh-edit"
 
-[plugins.fzf-tab]
-apply  = ["defer"]
-github = "Aloxaf/fzf-tab"
-tag    = "v1.1.2"
-
 [plugins.zoxide]
 apply  = ["defer"]
 github = "ajeetdsouza/zoxide"
@@ -108,6 +103,16 @@ post = 'zsh-defer _evalcache zoxide init --cmd j zsh'
 
 [plugins.fzf]
 inline = 'zsh-defer _evalcache fzf --zsh'
+
+[plugins.fzf-tab]
+apply  = ["defer"]
+github = "Aloxaf/fzf-tab"
+tag    = "v1.1.2"
+
+[plugins.tinted-fzf]
+apply  = ["defer"]
+github = "tinted-theming/tinted-fzf"
+use    = ["sh/base16-tomorrow.sh"]
 
 [plugins.fnm]
 inline = 'zsh-defer _evalcache fnm env --use-on-cd --log-level=quiet'
