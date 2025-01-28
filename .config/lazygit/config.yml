@@ -1,14 +1,15 @@
 git:
   paging:
-    pager: delta --paging=never
+    colorArg: always
+    pager: delta --light --paging=never
 
 gui:
   showIcons: true
 
 os:
   # https://github.com/jesseduffield/lazygit/issues/996#issuecomment-1624329763
-  edit: "nvim {{filename}}"
-  editAtLine: "nvim +{{line}} {{filename}}"
-  editAtLineAndWait: "nvim +{{line}} {{filename}}"
+  edit: 'nvim {{filename}}'
+  editAtLine: 'nvim +{{line}} {{filename}}'
+  editAtLineAndWait: 'nvim +{{line}} {{filename}}'
 
 promptToReturnFromSubprocess: false
