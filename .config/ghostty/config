@@ -12,7 +12,7 @@ window-padding-balance = true
 macos-window-shadow = false
 
 # background = #24282e
-theme = "ghostflow_dark"
+theme = "ghostflow_light"
 
 window-padding-balance = true
 window-padding-color = extend
