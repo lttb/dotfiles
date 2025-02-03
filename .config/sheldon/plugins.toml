@@ -109,10 +109,27 @@ apply  = ["defer"]
 github = "Aloxaf/fzf-tab"
 tag    = "v1.1.2"
 
-[plugins.tinted-fzf]
-apply  = ["defer"]
-github = "tinted-theming/tinted-fzf"
-use    = ["sh/base16-tomorrow.sh"]
+# [plugins.tinted-fzf]
+# apply  = ["defer"]
+# github = "tinted-theming/tinted-fzf"
+# use    = ["sh/base16-primer-dark-dimmed.sh"]
+
+[plugins.fzf-theme-morningstar]
+# dark
+inline = '''
+export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS"\
+" --color=bg+:#404040,bg:#24282e,spinner:#66A5AD,hl:#6099C0"\
+" --color=fg:#BBBBBB,header:#6099C0,info:#B77E64,pointer:#66A5AD"\
+" --color=marker:#66A5AD,fg+:#BBBBBB,prompt:#B77E64,hl+:#61ABDA"
+'''
+
+# light
+# inline = '''
+# export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS"\
+# " --color=bg+:#dfdad9,bg:#ffffff,spinner:#d7827e,hl:#56949f"\
+# " --color=fg:#575279,header:#56949f,info:#ea9d34,pointer:#d7827e"\
+# " --color=marker:#d7827e,fg+:#575279,prompt:#ea9d34,hl+:#56949f"
+# '''
 
 [plugins.fnm]
 inline = 'zsh-defer _evalcache fnm env --use-on-cd --log-level=quiet'
