@@ -202,3 +202,8 @@ inline = '''
 # sheldon completions
 zsh-defer _evalcache sheldon completions --shell zsh
 '''
+
+[plugins.pnpm-completion]
+inline = '''
+zsh-defer _evalcache pnpm completion zsh
+'''
