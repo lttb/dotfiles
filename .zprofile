@@ -1,4 +1,3 @@
-
 export NVIM_LISTEN_ADDRESS="/tmp/nvimsocket nvim"
 
 export EDITOR="nvim"
@@ -23,8 +22,8 @@ export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 # pnpm {{{
 export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+*":$PNPM_HOME:"*) ;;
+*) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # }}}
 
@@ -44,7 +43,6 @@ export PATH="$PATH:$HOME/.yarn/bin"
 
 export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
-
 
 export PATH="$HOME/.local/bin:$PATH"
 
