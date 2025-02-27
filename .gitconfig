@@ -13,6 +13,7 @@
   navigate = true  # use n and N to move between diff sections
   syntax-theme = ansi
   tabs = 2
+  diff-so-fancy = true
 [delta "light"]
   light = true
 [delta "dark"]
@@ -51,7 +52,7 @@
 [include]
   path = ~/.config/git/private/.gitconfig
 [credential]
-	helper = 
+	helper =
 	helper = /usr/local/share/gcm-core/git-credential-manager
 [credential "https://dev.azure.com"]
 	useHttpPath = true
