@@ -5,6 +5,7 @@ git:
 
 gui:
   showIcons: true
+  tabWidth: 2
 
 os:
   # https://github.com/jesseduffield/lazygit/issues/996#issuecomment-1624329763
