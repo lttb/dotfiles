@@ -13,7 +13,7 @@
   navigate = true  # use n and N to move between diff sections
   syntax-theme = ansi
   tabs = 2
-  diff-so-fancy = true
+  diff-so-fancy = false
 [delta "light"]
   light = true
 [delta "dark"]
