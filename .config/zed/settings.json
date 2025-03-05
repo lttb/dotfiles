@@ -10,7 +10,7 @@
 	"features": {
 		"edit_prediction_provider": "zed"
 	},
-	"theme": "Morningstar Dark",
+	"theme": "Morningstar Light",
 	"buffer_font_size": 14,
 	"experimental.theme_overrides": {
 		"players": [
