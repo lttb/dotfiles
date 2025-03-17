@@ -10,6 +10,6 @@ source $HOME/.config/zsh/sheldon.zsh
 
 zsh-defer safe_source $HOME/.secrets/private.zsh
 
-export DELTA_FEATURES="+light"
+export DELTA_FEATURES="+dark"
 
 [ -z "$ZPROF" ] || zprof
