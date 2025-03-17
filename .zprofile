@@ -41,8 +41,10 @@ export PKG_CONFIG_PATH="/opt/homebrew/opt/ruby/lib/pkgconfig"
 
 export PATH="$PATH:$HOME/.yarn/bin"
 
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+# export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
 
 export PATH="$HOME/.local/bin:$PATH"
 
