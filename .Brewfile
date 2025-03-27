@@ -28,6 +28,8 @@ brew "bat"
 brew "bore-cli"
 # New way to see and navigate directory trees
 brew "broot"
+# Version manager for neovim
+brew "bob"
 # Secure runtime for JavaScript and TypeScript
 brew "deno"
 # Modern, maintained replacement for ls
