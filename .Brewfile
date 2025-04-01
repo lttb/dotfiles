@@ -32,6 +32,8 @@ brew "broot"
 brew "bob"
 # Secure runtime for JavaScript and TypeScript
 brew "deno"
+# More intuitive version of du in rust
+brew "dust"
 # Modern, maintained replacement for ls
 brew "eza"
 # Simple, fast and user-friendly alternative to find
