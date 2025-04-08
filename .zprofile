@@ -1,4 +1,5 @@
-export NVIM_LISTEN_ADDRESS="/tmp/nvimsocket nvim"
+# doesn't work correctly with v11
+# export NVIM_LISTEN_ADDRESS="/tmp/nvimsocket nvim"
 
 export EDITOR="nvim"
 
