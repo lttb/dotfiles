@@ -15,10 +15,10 @@ palette = 13=#907aa9
 palette = 14=#d7827e
 palette = 15=#575279
 
-foreground = 575279
-background = ffffff
+foreground = #575279
+background = #ffffff
 
-cursor-color = cecacd
+cursor-color = #575279
 
-selection-background = dfdad9
-selection-foreground = 575279
+selection-background = #dfdad9
+selection-foreground = #575279
