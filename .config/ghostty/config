@@ -1,15 +1,14 @@
 font-family = "JetBrains Mono"
 font-size = 14
 font-thicken = true
+font-thicken-strength = 64
 
 adjust-cell-height = 20%
-adjust-underline-position = 2
-adjust-underline-thickness = 2
+adjust-underline-position = 3
+adjust-underline-thickness = 0
 
 window-padding-x = 10
 window-padding-balance = true
-
-macos-window-shadow = false
 
 theme = "morningstar_light"
 
