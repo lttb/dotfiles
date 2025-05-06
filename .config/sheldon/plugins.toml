@@ -50,10 +50,17 @@ pre = '''
 ZSH_GIT_PROMPT_NO_PROMPT=1
 '''
 
+[plugins.zoxide]
+apply  = ["defer"]
+github = "ajeetdsouza/zoxide"
+tag    = "v0.9.7"
+[plugins.zoxide.hooks]
+post = 'zsh-defer _evalcache zoxide init --cmd j zsh'
+
 [plugins.fzf-tab]
 apply  = ["defer"]
 github = "Aloxaf/fzf-tab"
-tag    = "v1.1.2"
+tag    = "v1.2.0"
 
 [plugins.completion-config]
 inline = '''
@@ -118,13 +125,6 @@ bindkey -M vicmd 'j' history-substring-search-down
 apply  = ["defer"]
 github = "lttb/zsh-edit"
 
-[plugins.zoxide]
-apply  = ["defer"]
-github = "ajeetdsouza/zoxide"
-tag    = "v0.9.6"
-[plugins.zoxide.hooks]
-post = 'zsh-defer _evalcache zoxide init --cmd j zsh'
-
 [plugins.fzf]
 inline = 'zsh-defer _evalcache fzf --zsh'
 
@@ -150,39 +150,6 @@ fi
 
 [plugins.fnm]
 inline = 'zsh-defer _evalcache fnm env --use-on-cd --log-level=quiet'
-
-[plugins.broot]
-inline = 'zsh-defer _evalcache broot --print-shell-function zsh'
-[plugins.broot_kitty]
-inline = '''
-if [[ -n "${KITTY_WINDOW_ID+1}" ]]; then
-  function br_detached {
-    local cmd_file=$(mktemp)
-
-    # Launch broot in a new split window and capture its raw output as the window ID
-    local broot_window_id=$(kitty @ launch --allow-remote-control --cwd=current --location=hsplit broot --outcmd "$cmd_file" "$@")
-
-    # Wait for the broot window to close
-    while kitty @ ls --match id:"$broot_window_id" >/dev/null 2>&1; do
-      sleep 0.1
-    done
-
-    # Check if broot wrote a command to the file
-    if [[ -s "$cmd_file" ]]; then
-      cmd=$(<"$cmd_file")
-      rm -f "$cmd_file"
-      # Execute the command directly in this shell
-      BUFFER="$cmd"
-      zle accept-line
-    else
-      rm -f "$cmd_file"
-    fi
-  }
-
-  zle -N br_widget br_detached
-  bindkey "^F" br_widget
-fi
-'''
 
 [plugins.vim]
 inline = '''
@@ -223,4 +190,37 @@ zsh-defer _evalcache sheldon completions --shell zsh
 [plugins.pnpm-completion]
 inline = '''
 zsh-defer _evalcache pnpm completion zsh
+'''
+
+[plugins.broot]
+inline = 'zsh-defer _evalcache broot --print-shell-function zsh'
+[plugins.broot_kitty]
+inline = '''
+if [[ -n "${KITTY_WINDOW_ID+1}" ]]; then
+  function br_detached {
+    local cmd_file=$(mktemp)
+
+    # Launch broot in a new split window and capture its raw output as the window ID
+    local broot_window_id=$(kitty @ launch --allow-remote-control --cwd=current --location=hsplit broot --outcmd "$cmd_file" "$@")
+
+    # Wait for the broot window to close
+    while kitty @ ls --match id:"$broot_window_id" >/dev/null 2>&1; do
+      sleep 0.1
+    done
+
+    # Check if broot wrote a command to the file
+    if [[ -s "$cmd_file" ]]; then
+      cmd=$(<"$cmd_file")
+      rm -f "$cmd_file"
+      # Execute the command directly in this shell
+      BUFFER="$cmd"
+      zle accept-line
+    else
+      rm -f "$cmd_file"
+    fi
+  }
+
+  zle -N br_widget br_detached
+  bindkey "^F" br_widget
+fi
 '''
