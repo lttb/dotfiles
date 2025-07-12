@@ -919,6 +919,14 @@
                         "vendor_id": 1240
                     },
                     "ignore": true
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 1,
+                        "vendor_id": 18003
+                    },
+                    "ignore": true
                 }
             ],
             "name": "lttb",
