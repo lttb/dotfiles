@@ -15,3 +15,7 @@ zsh-defer safe_source $HOME/.secrets/private.zsh
 export DELTA_FEATURES="+$THEME_MODE"
 
 [ -z "$ZPROF" ] || zprof
+
+# bun completions
+# no need as they're handled by sheldon
+# @see https://github.com/oven-sh/bun/issues/10897
