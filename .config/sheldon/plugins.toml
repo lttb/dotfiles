@@ -224,3 +224,6 @@ if [[ -n "${KITTY_WINDOW_ID+1}" ]]; then
   bindkey "^F" br_widget
 fi
 '''
+
+[plugins.television]
+inline = 'zsh-defer _evalcache tv init zsh'
