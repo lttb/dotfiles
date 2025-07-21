@@ -39,3 +39,4 @@ keybind = super+enter=unbind
 keybind = super+shift+p=unbind
 keybind = super+alt+p=toggle_command_palette
 
+keybind = shift+enter=unbind
