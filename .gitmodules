@@ -18,3 +18,6 @@
 [submodule ".config/kitty/kittens/vim-kitty-navigator"]
 	path = .config/kitty/kittens/vim-kitty-navigator
 	url = git@github.com:knubie/vim-kitty-navigator.git
+[submodule ".config/ghostty/shaders"]
+	path = .config/ghostty/shaders
+	url = git@github.com:hackr-sh/ghostty-shaders.git

@@ -10,7 +10,7 @@ adjust-underline-thickness = 0
 window-padding-x = 10
 window-padding-balance = true
 
-theme = "morningstar_light"
+theme = "morningstar_dark"
 
 window-padding-balance = true
 window-padding-color = extend
@@ -19,6 +19,8 @@ macos-window-shadow = false
 
 cursor-style = bar
 mouse-hide-while-typing = true
+
+custom-shader = ./custom-shaders/smooth-cursor.glsl
 
 quick-terminal-position = center
 
