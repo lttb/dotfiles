@@ -35,7 +35,14 @@ tag    = "v1.0.2"
 local = "~/.config/zsh/utils"
 
 [plugins.compinit]
-inline = 'autoload -Uz compinit && zsh-defer compinit'
+inline = '''
+autoload -Uz compinit
+if [ "$(date +'%j')" != "$(stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)" ]; then
+    compinit
+else
+    compinit -C
+fi
+'''
 
 [plugins.colors]
 inline = 'autoload -Uz colors && zsh-defer colors'
