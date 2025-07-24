@@ -20,8 +20,8 @@ macos-window-shadow = false
 cursor-style = bar
 mouse-hide-while-typing = true
 
-custom-shader = ./shaders-custom/cursor_synesthaxia.glsl
-custom-shader-animation = true
+# custom-shader = ./shaders-custom/smooth-cursor.glsl
+# custom-shader-animation = true
 
 quick-terminal-position = center
 
