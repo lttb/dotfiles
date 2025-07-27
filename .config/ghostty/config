@@ -17,11 +17,13 @@ window-padding-color = extend
 macos-titlebar-style = tabs
 macos-window-shadow = false
 
+macos-option-as-alt = false
+
 cursor-style = bar
 mouse-hide-while-typing = true
 
-# custom-shader = ./shaders-custom/smooth-cursor.glsl
-# custom-shader-animation = true
+custom-shader = ./shaders-custom/cursor_smear_2.glsl
+custom-shader-animation = true
 
 quick-terminal-position = center
 
@@ -31,6 +33,10 @@ keybind = super+w=unbind
 keybind = super+alt+w=close_surface
 keybind = alt+left=unbind
 keybind = alt+right=unbind
+
+# This tells Ghostty to send the Alt modifier for backspace
+keybind = alt+backspace=text:\x1b\x7f
+
 keybind = super+backspace=unbind
 
 # @see https://github.com/ghostty-org/ghostty/discussions/2811
