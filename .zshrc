@@ -4,7 +4,7 @@
 
 setopt autocd
 
-export THEME_MODE=dark
+export THEME_MODE=light
 
 WORDCHARS=${WORDCHARS//[\/-]/}
 

@@ -10,7 +10,7 @@ adjust-underline-thickness = 0
 window-padding-x = 10
 window-padding-balance = true
 
-theme = "morningstar_dark"
+theme = "morningstar_light"
 
 window-padding-balance = true
 window-padding-color = extend
