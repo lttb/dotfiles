@@ -4,7 +4,7 @@
 
 setopt autocd
 
-export THEME_MODE=light
+export THEME_MODE="${GHOSTTY_THEME_MODE:-light}"
 
 WORDCHARS=${WORDCHARS//[\/-]/}
 

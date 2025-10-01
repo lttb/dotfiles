@@ -1,4 +1,4 @@
-font-family = "Google Sans Code"
+font-family = "JetBrains Mono"
 font-size = 14
 font-thicken = true
 font-thicken-strength = 64
@@ -11,7 +11,8 @@ window-padding-x = 10
 window-padding-balance = true
 window-padding-color = extend
 
-theme = "morningstar_light"
+env = GHOSTTY_THEME_MODE=dark
+theme = "morningstar_dark"
 
 macos-titlebar-style = tabs
 macos-window-shadow = false
