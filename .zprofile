@@ -59,4 +59,6 @@ export PATH="$HOME/.bun/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
+
+export PATH="$HOME/.local/share/mise/shims:$PATH"
 # }}}
