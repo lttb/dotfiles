@@ -62,10 +62,10 @@ if command -v zimfw >/dev/null 2>&1; then
 fi
 
 # install npm packages
-if command -v npm >/dev/null 2>&1; then
-    echo "Installing global npm packages"
-    npm i -g serve ts-node vercel
-fi
+# if command -v npm >/dev/null 2>&1; then
+#     echo "Installing global npm packages"
+#     npm i -g serve ts-node vercel
+# fi
 
 # configure fzf
 source "$(brew --prefix)/fzf/install"
