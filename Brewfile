@@ -122,7 +122,7 @@ brew "tursodatabase/tap/turso"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
 # App to build and share containerised applications and microservices
-cask "docker"
+cask "docker-desktop"
 # Collaborative team software
 # cask "figma"
 # Cross-platform Git credential storage for multiple hosting providers
@@ -132,7 +132,7 @@ cask "git-credential-manager"
 # Web browser
 cask "google-chrome"
 # Set of tools to manage resources and applications hosted on Google Cloud
-cask "google-cloud-sdk"
+cask "gcloud-cli"
 # Keyboard customiser
 cask "karabiner-elements"
 # GPU-based terminal emulator
@@ -144,9 +144,9 @@ cask "mos"
 # Orchestrates virtual Ubuntu instances
 cask "multipass"
 # Developer IDE or Management Environment for Neo4j instances
-cask "neo4j"
+cask "neo4j-desktop"
 # Neovim Client
-cask "neovide"
+cask "neovide-app"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
 # Knowledge base that works on top of a local folder of plain text Markdown files
