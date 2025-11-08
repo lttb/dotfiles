@@ -98,6 +98,8 @@ brew "helix"
 brew "htop"
 # Command-line benchmarking tool
 brew "hyperfine"
+# C/C++ and Java libraries for Unicode and globalization
+brew "icu4c@76"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
 # Git-compatible distributed version control system
@@ -118,14 +120,8 @@ brew "luarocks"
 brew "mise"
 # Tiny, lightning fast, feature-packed file manager
 brew "nnn"
-# Fast, disk space efficient package manager
-brew "pnpm"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
-# Object-relational database system
-brew "postgresql@14"
-# Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
-brew "prettier"
 # Modern replacement for ps written in Rust
 brew "procs"
 # Cloud native development platform
@@ -172,14 +168,8 @@ brew "zellij"
 brew "zoxide"
 # UNIX shell (command interpreter)
 brew "zsh"
-# Tool for writing better scripts
-brew "zx"
-# prettier, on SPEED!
-brew "fsouza/prettierd/prettierd"
 # A tiling window manager for macOS based on binary space partitioning.
 brew "koekeishiya/formulae/yabai"
-# Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
-brew "oven-sh/bun/bun"
 # Quantum Mechanical Keyboard (QMK) Firmware
 brew "qmk/qmk/qmk"
 # The AI coding agent built for the terminal.
@@ -236,7 +226,7 @@ cask "qmk-toolbox"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Move and resize windows using keyboard shortcuts or snap areas
-# cask "rectangle"
+cask "rectangle"
 # Window snapping tool
 cask "rectangle-pro"
 # Collection of apps available by subscription
