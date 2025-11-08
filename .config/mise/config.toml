@@ -1,0 +1,5 @@
+[tools]
+bun = "latest"
+fnox  = "latest"
+node  = "25"
+usage = "latest"

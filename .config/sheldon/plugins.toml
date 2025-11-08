@@ -155,8 +155,8 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS"\
 fi
 '''
 
-[plugins.fnm]
-inline = 'zsh-defer _evalcache fnm env --use-on-cd --log-level=quiet'
+# [plugins.fnm]
+# inline = 'zsh-defer _evalcache fnm env --use-on-cd --log-level=quiet'
 
 [plugins.vim]
 inline = '''
@@ -234,3 +234,6 @@ fi
 
 [plugins.television]
 inline = 'zsh-defer _evalcache tv init zsh'
+
+[plugins.mise]
+inline = 'zsh-defer _evalcache mise activate zsh'
