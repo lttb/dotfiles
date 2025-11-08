@@ -1,4 +1,4 @@
-#!/usr/bin/env bun
+#!/usr/bin/env -S mise x bun -- bun
 
 // Required parameters:
 // @raycast.schemaVersion 1
