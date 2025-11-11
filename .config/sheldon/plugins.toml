@@ -35,13 +35,17 @@ tag    = "v1.0.2"
 local = "~/.config/zsh/utils"
 
 [plugins.compinit]
+# - '#q' is an explicit glob qualifier that makes globbing work within zsh's [[ ]] construct.
+# - 'N' makes the glob pattern evaluate to nothing when it doesn't match (rather than throw a globbing error)
+# - '.' matches "regular files"
+# - 'mh+24' matches files (or directories or whatever) that are older than 24 hours.
 inline = '''
 autoload -Uz compinit
-if [ "$(date +'%j')" != "$(stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)" ]; then
-    compinit
+if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
+	zsh-defer compinit;
 else
-    compinit -C
-fi
+	zsh-defer compinit -C;
+fi;
 '''
 
 [plugins.colors]
