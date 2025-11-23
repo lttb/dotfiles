@@ -46,8 +46,6 @@ brew "cloudflared"
 brew "cmake"
 # Dependency manager for Cocoa projects
 brew "cocoapods"
-# Secure runtime for JavaScript and TypeScript
-brew "deno"
 # More intuitive version of du in rust
 brew "dust"
 # Soft fork of the helix editor
@@ -66,8 +64,6 @@ brew "ffmpeg"
 brew "fish"
 # Formatter for Fennel code
 brew "fnlfmt"
-# Fast and simple Node.js version manager
-brew "fnm"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # Toolkit for image loading and pixel buffer manipulation
@@ -150,16 +146,12 @@ brew "starship"
 brew "television"
 # Program that allows you to count code, quickly
 brew "tokei"
-# Extremely fast Python package installer and resolver, written in Rust
-brew "uv"
 # Vi 'workalike' with many additional features
 brew "vim"
 # Generator for LS_COLORS with support for multiple color themes
 brew "vivid"
 # Yet Another Dotfiles Manager
 brew "yadm"
-# JavaScript package manager
-brew "yarn"
 # Blazing fast terminal file manager written in Rust, based on async I/O
 brew "yazi"
 # Pluggable terminal workspace, with terminal multiplexer as the base feature
