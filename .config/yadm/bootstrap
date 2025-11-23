@@ -45,7 +45,7 @@ echo '💻 MacOS preparation is done'
 # install homebrew if it's missing
 if ! command -v brew >/dev/null 2>&1; then
     echo "Installing homebrew"
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 if [ -f "$HOME/.Brewfile" ]; then
@@ -56,10 +56,10 @@ fi
 #}}}
 
 # install zimfw
-if command -v zimfw >/dev/null 2>&1; then
-    echo "Installing zimfw"
-    curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
-fi
+# if command -v zimfw >/dev/null 2>&1; then
+#     echo "Installing zimfw"
+#     curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
+# fi
 
 # install npm packages
 # if command -v npm >/dev/null 2>&1; then
@@ -68,4 +68,4 @@ fi
 # fi
 
 # configure fzf
-source "$(brew --prefix)/fzf/install"
+# source "$(brew --prefix)/fzf/install"
