@@ -1,23 +1,23 @@
 [submodule ".config/nvim"]
 	path = .config/nvim
-	url = git@github.com:lttb/nvim.git
+	url = https://github.com:lttb/nvim.git
 	branch = main
 [submodule ".config/kitty/themes/catppuccin"]
 	path = .config/kitty/themes/catppuccin
-	url = git@github.com:lttb/catppuccin-kitty.git
+	url = https://github.com:lttb/catppuccin-kitty.git
   branch = main
 [submodule ".config/gitui/themes/catppuccin"]
 	path = .config/gitui/themes/catppuccin
-	url = git@github.com:catppuccin/gitui.git
+	url = https://github.com:catppuccin/gitui.git
 [submodule ".config/bat/themes/catppuccin"]
 	path = .config/bat/themes/catppuccin
-	url = git@github.com:catppuccin/bat.git
+	url = https://github.com:catppuccin/bat.git
 [submodule ".config/kitty/kittens/kitty-kitten-search"]
 	path = .config/kitty/kittens/kitty-kitten-search
-	url = git@github.com:trygveaa/kitty-kitten-search.git
+	url = https://github.com:trygveaa/kitty-kitten-search.git
 [submodule ".config/kitty/kittens/vim-kitty-navigator"]
 	path = .config/kitty/kittens/vim-kitty-navigator
-	url = git@github.com:knubie/vim-kitty-navigator.git
+	url = https://github.com:knubie/vim-kitty-navigator.git
 [submodule ".config/ghostty/shaders"]
 	path = .config/ghostty/shaders
-	url = git@github.com:hackr-sh/ghostty-shaders.git
+	url = https://github.com:hackr-sh/ghostty-shaders.git
