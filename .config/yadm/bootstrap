@@ -55,6 +55,9 @@ fi
 
 #}}}
 
+# install the mise packages
+mise install
+
 # install zimfw
 # if command -v zimfw >/dev/null 2>&1; then
 #     echo "Installing zimfw"
