@@ -45,7 +45,7 @@ brew "cocoapods"
 # More intuitive version of du in rust
 brew "dust"
 # Soft fork of the helix editor
-brew "evil-helix", link: false
+brew "evil-helix"
 # Modern, maintained replacement for ls
 brew "eza"
 # Simple, fast and user-friendly alternative to find
@@ -85,7 +85,7 @@ brew "gobject-introspection"
 # Cross-platform program for developing Haskell projects
 brew "haskell-stack"
 # Post-modern modal text editor
-brew "helix"
+brew "helix", link: false
 # Improved top (interactive process viewer)
 brew "htop"
 # Command-line benchmarking tool
@@ -94,6 +94,8 @@ brew "hyperfine"
 brew "icu4c@76"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
+# Command-line interface for JFrog products
+brew "jfrog-cli"
 # Git-compatible distributed version control system
 brew "jj"
 # Image manipulation library
@@ -124,10 +126,6 @@ brew "pyenv"
 brew "rename"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# Safe, concurrent, practical language
-brew "rust"
-# Rust toolchain installer
-brew "rustup"
 # 7-Zip is a file archiver with a high compression ratio
 brew "sevenzip"
 # Fast, configurable, shell plugin manager
@@ -175,6 +173,8 @@ cask "docker-desktop"
 cask "figma"
 # UI toolkit for building applications for mobile, web and desktop
 cask "flutter"
+cask "font-fira-code"
+cask "font-symbols-only-nerd-font"
 # Set of tools to manage resources and applications hosted on Google Cloud
 cask "gcloud-cli"
 # Terminal emulator that uses platform-native UI and GPU acceleration
@@ -195,6 +195,8 @@ cask "karabiner-elements"
 cask "kitty"
 # Shows the next meeting in the menu bar
 cask "meetingbar"
+# Tool to control external monitor brightness & volume
+cask "monitorcontrol"
 # Smooths scrolling and set mouse scroll directions independently
 cask "mos"
 # Orchestrates virtual Ubuntu instances
@@ -232,3 +234,5 @@ cask "visual-studio-code"
 cask "wezterm"
 # Multiplayer code editor
 cask "zed"
+# Video communication and virtual meeting platform
+cask "zoom"
