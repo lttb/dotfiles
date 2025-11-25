@@ -169,6 +169,8 @@ cask "aerospace"
 cask "chatgpt"
 # App to build and share containerised applications and microservices
 cask "docker-desktop"
+# Multi-platform multi-messaging app
+cask "ferdium"
 # Collaborative team software
 cask "figma"
 # UI toolkit for building applications for mobile, web and desktop
