@@ -176,6 +176,7 @@ cask "figma"
 # UI toolkit for building applications for mobile, web and desktop
 cask "flutter"
 cask "font-fira-code"
+cask "font-jetbrains-mono"
 cask "font-symbols-only-nerd-font"
 # Set of tools to manage resources and applications hosted on Google Cloud
 cask "gcloud-cli"
