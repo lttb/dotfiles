@@ -27,6 +27,10 @@ custom-shader-animation = true
 
 quick-terminal-position = center
 
+background-image = ./background.jpg
+background-image-fit = cover
+background-image-opacity = 0.1
+
 keybind = global:shift+cmd+j=toggle_quick_terminal
 
 keybind = super+w=unbind
@@ -54,3 +58,5 @@ keybind = shift+enter=unbind
 
 keybind = super+f=unbind
 keybind = super+alt+f=start_search
+
+
