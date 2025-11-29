@@ -51,3 +51,6 @@ keybind = super+shift+p=unbind
 keybind = super+alt+p=toggle_command_palette
 
 keybind = shift+enter=unbind
+
+keybind = super+f=unbind
+keybind = super+alt+f=start_search
