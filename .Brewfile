@@ -226,6 +226,8 @@ cask "rectangle-pro"
 cask "setapp"
 # Solidity Compiler for Solana and Substrate
 cask "solang"
+# Music streaming service
+cask "spotify"
 cask "switchkey"
 # Messaging app with a focus on speed and security
 cask "telegram"
