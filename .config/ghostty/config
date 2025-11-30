@@ -11,8 +11,8 @@ window-padding-x = 10
 window-padding-balance = true
 window-padding-color = extend
 
-env = GHOSTTY_THEME_MODE=light
-theme = "morningstar_light"
+env = GHOSTTY_THEME_MODE=dark
+theme = "morningstar_dark"
 
 macos-titlebar-style = tabs
 macos-window-shadow = false
