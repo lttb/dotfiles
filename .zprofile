@@ -62,3 +62,4 @@ export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 
 export PATH="$HOME/.local/share/mise/shims:$PATH"
 # }}}
+export JAVA_HOME=$(/usr/libexec/java_home)
