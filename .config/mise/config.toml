@@ -1,6 +1,7 @@
 [tools]
 biome = "latest"
 bun = "latest"
+"cargo:tree-sitter-cli" = "latest"
 claude-code = "latest"
 codex = "latest"
 deno = "latest"
