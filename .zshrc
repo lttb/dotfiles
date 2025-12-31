@@ -18,6 +18,15 @@ export DELTA_FEATURES="+$THEME_MODE"
 
 alias dev='docker run --rm -it -v "$(pwd)":/app -w /app -v "$HOME/.config/nvim":"/root/.config/nvim" -e LANG=en_US.UTF-8 my-neovim zsh'
 
+zj() {
+  if [[ $THEME_MODE == "dark" ]]; then
+    zellij options --theme nord
+  else
+    zellij options --theme catppuccin-latte
+  fi
+}
+
+
 [ -z "$ZPROF" ] || zprof
 
 # bun completions
