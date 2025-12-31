@@ -1,6 +1,8 @@
 tap "ethereum/ethereum"
 tap "fsouza/prettierd"
 tap "grishka/grishka"
+tap "homebrew/bundle"
+tap "homebrew/services"
 tap "hyperledger/solang"
 tap "jesseduffield/lazygit"
 tap "koekeishiya/formulae"
@@ -30,6 +32,8 @@ brew "bob"
 brew "bore-cli"
 # New way to see and navigate directory trees
 brew "broot"
+# Resource monitor. C++ version and continuation of bashtop and bpytop
+brew "btop"
 # Core application library for C
 brew "glib"
 # Vector graphics library with cross-device output support
@@ -45,7 +49,7 @@ brew "cocoapods"
 # More intuitive version of du in rust
 brew "dust"
 # Soft fork of the helix editor
-brew "evil-helix"
+brew "evil-helix", link: false
 # Modern, maintained replacement for ls
 brew "eza"
 # Simple, fast and user-friendly alternative to find
@@ -66,6 +70,8 @@ brew "fzf"
 brew "gdk-pixbuf"
 # GitHub command-line tool
 brew "gh"
+# Interpreter for PostScript and PDF
+brew "ghostscript"
 # Distributed revision control system
 brew "git"
 # Syntax-highlighting pager for git and diff output
@@ -76,7 +82,7 @@ brew "git-lfs"
 brew "gitui"
 # GNU implementation of the famous stream editor
 brew "gnu-sed"
-# GNU Pretty Good Privacy (PGP) package
+# GNU Privacy Guard (OpenPGP)
 brew "gnupg"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
@@ -85,13 +91,15 @@ brew "gobject-introspection"
 # Cross-platform program for developing Haskell projects
 brew "haskell-stack"
 # Post-modern modal text editor
-brew "helix", link: false
+brew "helix"
 # Improved top (interactive process viewer)
 brew "htop"
 # Command-line benchmarking tool
 brew "hyperfine"
 # C/C++ and Java libraries for Unicode and globalization
 brew "icu4c@76"
+# Library to render SVG files using Cairo
+brew "librsvg"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
 # Command-line interface for JFrog products
@@ -106,14 +114,14 @@ brew "jq"
 brew "lazygit"
 # Terminal file manager
 brew "lf"
-# Library to render SVG files using Cairo
-brew "librsvg"
 # Package manager for the Lua programming language
 brew "luarocks"
 # Polyglot runtime manager (asdf rust clone)
 brew "mise"
 # Tiny, lightning fast, feature-packed file manager
 brew "nnn"
+# Paste PNG into files
+brew "pngpaste"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
 # Modern replacement for ps written in Rust
@@ -167,6 +175,8 @@ brew "tursodatabase/tap/turso"
 cask "aerospace"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
+# Terminal-based AI coding assistant
+cask "claude-code"
 # App to build and share containerised applications and microservices
 cask "docker-desktop"
 # Multi-platform multi-messaging app
@@ -176,6 +186,7 @@ cask "figma"
 # UI toolkit for building applications for mobile, web and desktop
 cask "flutter"
 cask "font-fira-code"
+cask "font-google-sans-code"
 cask "font-jetbrains-mono"
 cask "font-symbols-only-nerd-font"
 # Set of tools to manage resources and applications hosted on Google Cloud
