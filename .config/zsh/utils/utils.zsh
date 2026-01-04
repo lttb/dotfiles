@@ -29,6 +29,8 @@ alias ggp="git push"
 alias gco="git checkout"
 alias gcam='git commit --all --message'
 alias gd='git diff'
+
+alias dev='docker run --rm -it -v "$(pwd)":/app -w /app -v "$HOME/.config/nvim":"/root/.config/nvim" -e LANG=en_US.UTF-8 my-neovim zsh'
 # }}}
 
 # Functions {{{
@@ -98,4 +100,21 @@ get_theme_mode() {
     echo "light"
   fi
 }
+
+zj() {
+  if [[ $THEME_MODE == "dark" ]]; then
+    zellij options --theme nord
+  else
+    zellij options --theme catppuccin-latte
+  fi
+}
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
+
 # }}}
