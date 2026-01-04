@@ -237,3 +237,6 @@ inline = 'zsh-defer _evalcache tv init zsh'
 
 # [plugins.mise]
 # inline = 'zsh-defer _evalcache mise activate zsh'
+
+[plugins.worktrunk]
+inline = 'zsh-defer _evalcache wt config shell init zsh'
