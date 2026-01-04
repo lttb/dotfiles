@@ -31,6 +31,8 @@ alias gcam='git commit --all --message'
 alias gd='git diff'
 
 alias dev='docker run --rm -it -v "$(pwd)":/app -w /app -v "$HOME/.config/nvim":"/root/.config/nvim" -e LANG=en_US.UTF-8 my-neovim zsh'
+
+alias fnoxenv='eval $(fnox hook-env -s zsh)'
 # }}}
 
 # Functions {{{
