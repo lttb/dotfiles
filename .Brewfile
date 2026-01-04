@@ -40,6 +40,8 @@ brew "glib"
 brew "cairo"
 # Binary installation for rust projects
 brew "cargo-binstall"
+# Object-file caching compiler wrapper
+brew "ccache"
 # Cloudflare Tunnel client (formerly Argo Tunnel)
 brew "cloudflared"
 # Cross-platform make
@@ -88,6 +90,8 @@ brew "gnupg"
 brew "pkgconf"
 # Generate introspection data for GObject libraries
 brew "gobject-introspection"
+# Perfect hash function generator
+brew "gperf"
 # Cross-platform program for developing Haskell projects
 brew "haskell-stack"
 # Post-modern modal text editor
@@ -114,10 +118,16 @@ brew "jq"
 brew "lazygit"
 # Terminal file manager
 brew "lf"
+# Implementation of the file(1) command
+brew "libmagic"
 # Package manager for the Lua programming language
 brew "luarocks"
 # Polyglot runtime manager (asdf rust clone)
 brew "mise"
+# Deep clean and optimize your Mac
+brew "mole"
+# Small build system for use with gyp or CMake
+brew "ninja"
 # Tiny, lightning fast, feature-packed file manager
 brew "nnn"
 # Paste PNG into files
@@ -130,6 +140,8 @@ brew "procs"
 brew "pulumi"
 # Python version management
 brew "pyenv"
+# Generic machine emulator and virtualizer
+brew "qemu"
 # Perl-powered file rename script with many helpful built-ins
 brew "rename"
 # Search tool like grep and The Silver Searcher
@@ -152,6 +164,8 @@ brew "tokei"
 brew "vim"
 # Generator for LS_COLORS with support for multiple color themes
 brew "vivid"
+# Internet file retriever
+brew "wget"
 # Yet Another Dotfiles Manager
 brew "yadm"
 # Blazing fast terminal file manager written in Rust, based on async I/O
@@ -195,6 +209,8 @@ cask "gcloud-cli"
 cask "ghostty@tip"
 # Cross-platform Git credential storage for multiple hosting providers
 cask "git-credential-manager"
+# Cross-platform Git credential storage for multiple hosting providers
+cask "git-credential-manager"
 # Neovim GUI written in Golang, using a Golang qt backend
 cask "goneovim"
 # Web browser
@@ -219,10 +235,12 @@ cask "multipass"
 cask "neardrop"
 # Developer IDE or Management Environment for Neo4j instances
 cask "neo4j-desktop"
-# Neovim Client
-cask "neovide-app"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
+# Command-line tools for Nordic nRF Semiconductors
+cask "nordic-nrf-command-line-tools"
+# Unified CLI utility for Nordic Semiconductor products
+cask "nrfutil"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 # Toolbox companion for QMK Firmware
@@ -233,10 +251,14 @@ cask "raycast"
 cask "rectangle"
 # Window snapping tool
 cask "rectangle-pro"
+# Software and Documentation pack for Segger J-Link debug probes
+cask "segger-jlink"
 # Collection of apps available by subscription
 cask "setapp"
 # Solidity Compiler for Solana and Substrate
 cask "solang"
+# Open source cross-platform file explorer
+cask "spacedrive"
 # Music streaming service
 cask "spotify"
 cask "switchkey"
@@ -244,6 +266,8 @@ cask "switchkey"
 cask "telegram"
 # Unicode keyboard layout editor
 cask "ukelele"
+# AI image upscaler
+cask "upscayl"
 # Open-source code editor
 cask "visual-studio-code"
 # GPU-accelerated cross-platform terminal emulator and multiplexer
