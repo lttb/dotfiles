@@ -59,3 +59,4 @@ keybind = super+alt+f=start_search
 
 keybind = super+period=text:\x1b[46;9u
 
+keybind = shift+enter=text:\x1b\r
