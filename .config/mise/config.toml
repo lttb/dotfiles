@@ -2,6 +2,7 @@
 biome                          = "latest"
 bun                            = "latest"
 "cargo:cbor-cli"               = "latest"
+"cargo:neovide" = "latest"
 "cargo:tree-sitter-cli"        = "latest"
 "cargo:worktrunk"              = "latest"
 claude-code                    = "latest"
