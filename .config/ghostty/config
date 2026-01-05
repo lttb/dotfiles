@@ -1,3 +1,5 @@
+config-file = local
+
 font-family = "JetBrains Mono"
 font-size = 14
 font-thicken = true
@@ -10,9 +12,6 @@ adjust-underline-thickness = 0
 window-padding-x = 10
 window-padding-balance = true
 window-padding-color = extend
-
-env = GHOSTTY_THEME_MODE=light
-theme = "morningstar_light"
 
 macos-titlebar-style = tabs
 macos-window-shadow = false

@@ -2,9 +2,9 @@
 
 [ -z "$ZPROF" ] || zmodload zsh/zprof
 
-setopt autocd
+setopt
 
-export THEME_MODE="${GHOSTTY_THEME_MODE:-light}"
+export THEME_MODE="${GHOSTTY_THEME_MODE:-${KITTY_THEME_MODE:-light}}"
 
 WORDCHARS=${WORDCHARS//[\/-]/}
 
