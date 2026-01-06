@@ -2,6 +2,7 @@
 	path = .config/nvim
 	url = https://github.com/lttb/nvim
 	branch = main
+	ignore = all
 [submodule ".config/kitty/themes/catppuccin"]
 	path = .config/kitty/themes/catppuccin
   url = https://github.com/lttb/catppuccin-kitty
