@@ -1,0 +1,19 @@
+[settings]
+lockfile = true
+
+[tools]
+cargo-binstall          = "latest"
+"cargo:cbor-cli"        = "latest"
+"cargo:neovide"         = "latest"
+"cargo:tree-sitter-cli" = "latest"
+"cargo:worktrunk"       = "latest"
+deno                    = "latest"
+gradle                  = "latest"
+java                    = "openjdk-21"
+"npm:edge-impulse-cli"  = "latest"
+"npm:npkill"            = "latest"
+"pipx:cbor2"            = "latest"
+"pipx:fit-tool"         = "latest"
+"pipx:marker-pdf"       = "latest"
+rust                    = "latest"
+uv                      = "latest"
