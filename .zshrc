@@ -2,7 +2,7 @@
 
 [ -z "$ZPROF" ] || zmodload zsh/zprof
 
-setopt
+# setopt
 
 export THEME_MODE="${GHOSTTY_THEME_MODE:-${KITTY_THEME_MODE:-light}}"
 
