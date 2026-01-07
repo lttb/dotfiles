@@ -1,4 +1,5 @@
 [tools]
+# {{{ sandbox
 biome                                 = "latest"
 bun                                   = "latest"
 claude-code                           = "latest"
@@ -23,7 +24,25 @@ prettier                              = "latest"
 python                                = "latest"
 usage                                 = "latest"
 wrangler                              = "latest"
+# }}}
+
+cargo-binstall          = "latest"
+"cargo:cbor-cli"        = "latest"
+"cargo:neovide"         = "latest"
+"cargo:tree-sitter-cli" = "latest"
+"cargo:worktrunk"       = "latest"
+deno                    = "latest"
+gradle                  = "latest"
+java                    = "openjdk-21"
+"npm:edge-impulse-cli"  = "latest"
+"npm:npkill"            = "latest"
+"pipx:cbor2"            = "latest"
+"pipx:fit-tool"         = "latest"
+"pipx:marker-pdf"       = "latest"
+rust                    = "latest"
+uv                      = "latest"
 
 [settings]
 experimental                        = true
 idiomatic_version_file_enable_tools = ["java", "node"]
+lockfile                            = true

@@ -10,7 +10,7 @@ WORDCHARS=${WORDCHARS//[\/-]/}
 
 source $HOME/.config/zsh/sheldon.zsh
 
-zsh-defer safe_source $HOME/.zsh/mise-dir.zsh
+# zsh-defer safe_source $HOME/.zsh/mise-dir.zsh
 
 zsh-defer safe_source $HOME/.secrets/private.zsh
 
