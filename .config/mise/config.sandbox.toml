@@ -1,0 +1,30 @@
+[tools]
+biome                                 = "latest"
+bun                                   = "latest"
+claude-code                           = "latest"
+codex                                 = "latest"
+fnox                                  = "latest"
+node                                  = "latest"
+npm                                   = "latest"
+"npm:@github/copilot"                 = "latest"
+"npm:@google/gemini-cli"              = "latest"
+"npm:@openai/codex"                   = "latest"
+"npm:@zed-industries/claude-code-acp" = "latest"
+"npm:esbuild"                         = "0.25"
+"npm:mjml"                            = "latest"
+"npm:prettier-language-server"        = "latest"
+"npm:serve"                           = "latest"
+"npm:update-ts-references"            = "latest"
+"npm:zx"                              = "latest"
+opencode                              = "latest"
+pipx                                  = "latest"
+pnpm                                  = "latest"
+prettier                              = "latest"
+python                                = "latest"
+usage                                 = "latest"
+wrangler                              = "latest"
+
+[settings]
+experimental                        = true
+idiomatic_version_file_enable_tools = ["java", "node"]
+lockfile                            = true
