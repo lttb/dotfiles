@@ -12,7 +12,7 @@ source $HOME/.config/zsh/sheldon.zsh
 
 # zsh-defer safe_source $HOME/.zsh/mise-dir.zsh
 
-zsh-defer safe_source $HOME/.secrets/private.zsh
+zsh-defer-t safe_source $HOME/.secrets/private.zsh
 
 export DELTA_FEATURES="+$THEME_MODE"
 

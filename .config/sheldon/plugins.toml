@@ -13,7 +13,8 @@
 shell = "zsh"
 
 [templates]
-defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}{{ hooks?.post | nl }}"
+defer   = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}{{ hooks?.post | nl }}"
+defer-t = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer-t source \"{{ file }}\"\n{% endfor %}{{ hooks?.post | nl }}"
 
 [plugins]
 
@@ -26,12 +27,17 @@ local = "~/.config/zsh/instant-prompt"
 [plugins.zsh-defer]
 github = "romkatv/zsh-defer"
 rev    = "53a26e287fbbe2dcebb3aa1801546c6de32416fa"
+[plugins.zsh-defer.hooks]
+post = '''
+alias zsh-defer-t="zsh-defer -t 0"
+'''
 
 [plugins.evalcache]
 github = "mroth/evalcache"
 tag    = "v1.0.2"
 
 [plugins.utils]
+apply = ["defer-t"]
 local = "~/.config/zsh/utils"
 
 [plugins.compinit]
@@ -49,10 +55,10 @@ fi;
 '''
 
 [plugins.colors]
-inline = 'autoload -Uz colors && zsh-defer colors'
+inline = 'autoload -Uz colors'
 
 [plugins.git-prompt]
-apply  = ["defer"]
+apply  = ["defer-t"]
 branch = "main"
 github = "lttb/git-prompt.zsh"
 use    = ["git-prompt.zsh"]
@@ -62,14 +68,10 @@ ZSH_GIT_PROMPT_NO_PROMPT=1
 '''
 
 [plugins.zoxide]
-apply  = ["defer"]
-github = "ajeetdsouza/zoxide"
-tag    = "v0.9.7"
-[plugins.zoxide.hooks]
-post = 'zsh-defer _evalcache zoxide init --cmd j zsh'
+inline = 'zsh-defer-t _evalcache zoxide init --cmd j zsh'
 
 [plugins.fzf-tab]
-apply  = ["defer"]
+apply  = ["defer-t"]
 github = "Aloxaf/fzf-tab"
 tag    = "v1.2.0"
 
@@ -92,12 +94,11 @@ zstyle ':completion:*' accept-exact '*(N)'
 '''
 
 [plugins.oh-my-zsh]
-apply  = ["defer"]
 github = "ohmyzsh/ohmyzsh"
 use    = ["lib/history.zsh"]
 
 [plugins.zsh-autosuggestions]
-apply  = ["defer"]
+apply  = ["defer-t"]
 github = "zsh-users/zsh-autosuggestions"
 tag    = "v0.7.1"
 [plugins.zsh-autosuggestions.hooks]
@@ -112,7 +113,7 @@ github = "zsh-users/zsh-syntax-highlighting"
 tag    = "0.8.0"
 
 [plugins.zsh-history-substring-search]
-apply  = ["defer"]
+apply  = ["defer-t"]
 github = "zsh-users/zsh-history-substring-search"
 tag    = "v1.1.0"
 [plugins.zsh-history-substring-search.hooks]
@@ -133,11 +134,11 @@ bindkey -M vicmd 'j' history-substring-search-down
 '''
 
 [plugins.zsh-edit]
-apply  = ["defer"]
+apply  = ["defer-t"]
 github = "lttb/zsh-edit"
 
 [plugins.fzf]
-inline = 'zsh-defer _evalcache fzf --zsh'
+inline = 'zsh-defer-t _evalcache fzf --zsh'
 
 # [plugins.tinted-fzf]
 # apply  = ["defer"]
@@ -179,28 +180,28 @@ bindkey -M vicmd 'y' vi-yank-xclip
 # @see "trapd00r/LS_COLORS"
 [plugins.vivid]
 inline = '''
-zsh-defer _evalcache export LS_COLORS=\"$(vivid generate nord)\"
+zsh-defer-t _evalcache export LS_COLORS=\"$(vivid generate nord)\"
 '''
 
 [plugins.bun]
 inline = '''
 # bun completions
-zsh-defer safe_source "$HOME/.bun/_bun"
+zsh-defer-t safe_source "$HOME/.bun/_bun"
 '''
 
 [plugins.sheldon]
 inline = '''
 # sheldon completions
-zsh-defer _evalcache sheldon completions --shell zsh
+zsh-defer-t _evalcache sheldon completions --shell zsh
 '''
 
 [plugins.pnpm-completion]
 inline = '''
-zsh-defer _evalcache pnpm completion zsh
+zsh-defer-t _evalcache pnpm completion zsh
 '''
 
 [plugins.broot]
-inline = 'zsh-defer _evalcache broot --print-shell-function zsh'
+inline = 'zsh-defer-t _evalcache broot --print-shell-function zsh'
 [plugins.broot_kitty]
 inline = '''
 if [[ -n "${KITTY_WINDOW_ID+1}" ]]; then
@@ -233,13 +234,13 @@ fi
 '''
 
 [plugins.television]
-inline = 'zsh-defer _evalcache tv init zsh'
+inline = 'zsh-defer-t _evalcache tv init zsh'
 
 [plugins.mise]
-inline = 'zsh-defer _evalcache mise activate zsh'
+inline = 'zsh-defer-t _evalcache mise activate zsh'
 
 # [plugins.fnox]
-# inline = 'zsh-defer _evalcache fnox activate zsh'
+# inline = 'zsh-defer-t _evalcache fnox activate zsh'
 
 [plugins.worktrunk]
-inline = 'zsh-defer _evalcache wt config shell init zsh'
+inline = 'zsh-defer-t _evalcache wt config shell init zsh'
