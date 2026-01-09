@@ -64,3 +64,7 @@ export PATH="$HOME/.local/share/mise/shims:$PATH"
 # }}}
 
 # export JAVA_HOME=$(/usr/libexec/java_home)
+
+# proto
+export PROTO_HOME="$HOME/.proto";
+export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH";
