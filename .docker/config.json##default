@@ -1,0 +1,7 @@
+{
+	"auths": {},
+	"credsStore": "desktop",
+	"cliPluginsExtraDirs": [
+		"/opt/homebrew/lib/docker/cli-plugins"
+	]
+}
