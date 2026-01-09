@@ -136,6 +136,8 @@ brew "pngpaste"
 brew "poppler"
 # Modern replacement for ps written in Rust
 brew "procs"
+# Pluggable multi-language version manager
+brew "proto"
 # Cloud native development platform
 brew "pulumi"
 # Python version management
@@ -180,8 +182,6 @@ brew "zsh"
 brew "koekeishiya/formulae/yabai"
 # Quantum Mechanical Keyboard (QMK) Firmware
 brew "qmk/qmk/qmk"
-# The AI coding agent built for the terminal.
-brew "sst/tap/opencode"
 # Stripe CLI utility
 brew "stripe/stripe-cli/stripe"
 brew "tursodatabase/tap/turso"
@@ -189,8 +189,6 @@ brew "tursodatabase/tap/turso"
 cask "aerospace"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
-# Terminal-based AI coding assistant
-cask "claude-code"
 # App to build and share containerised applications and microservices
 cask "docker-desktop"
 # Multi-platform multi-messaging app
