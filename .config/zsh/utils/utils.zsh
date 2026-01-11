@@ -119,4 +119,16 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+function tvcd() {
+  local cwd=$(tv)
+
+  [[ -n $cwd && $cwd != $PWD ]] || return
+
+  if [[ -d $cwd ]]; then
+    cd -- "$cwd"
+  else
+    cd -- "${cwd:h}"
+  fi
+}
+
 # }}}

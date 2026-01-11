@@ -15,7 +15,6 @@ zsh-defer safe_source $HOME/.zsh/mise-enter.zsh
 zsh-defer safe_source $HOME/.secrets/private.zsh
 
 export DELTA_FEATURES="+$THEME_MODE"
-
 [ -z "$ZPROF" ] || zprof
 
 # bun completions
