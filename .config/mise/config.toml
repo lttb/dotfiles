@@ -41,6 +41,7 @@ java                    = "openjdk-21"
 "pipx:marker-pdf"       = "latest"
 rust                    = "latest"
 uv                      = "latest"
+"npm:aedes-cli"         = "latest"
 
 [settings]
 experimental                        = true
