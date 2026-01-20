@@ -42,6 +42,7 @@ java                    = "openjdk-21"
 rust                    = "latest"
 uv                      = "latest"
 "npm:aedes-cli"         = "latest"
+"cargo:resvg"           = "latest"
 
 [settings]
 experimental                        = true
