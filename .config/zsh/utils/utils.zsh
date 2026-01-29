@@ -131,4 +131,9 @@ function tvcd() {
   fi
 }
 
+function imgpaste() {
+  local filename=".tmp/$(uuid).png"
+  pngpaste "$filename" && echo "$filename"
+}
+
 # }}}
