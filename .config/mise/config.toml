@@ -43,6 +43,9 @@ java                    = "openjdk-21"
 rust                    = "latest"
 uv                      = "latest"
 "npm:jscpd" = "latest"
+"npm:oxfmt" = "latest"
+"npm:oxlint" = "latest"
+"npm:@jimsheen/yalc" = "latest"
 
 [settings]
 experimental                        = true
