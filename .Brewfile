@@ -56,11 +56,7 @@ brew "evil-helix", link: false
 brew "eza"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
-# OpenType text shaping engine
-brew "harfbuzz"
-# Framework for layout and rendering of i18n text
-brew "pango"
-# Play, record, convert, and stream audio and video
+# Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
 # User-friendly command-line shell for UNIX-like operating systems
 brew "fish"
@@ -72,6 +68,10 @@ brew "fzf"
 brew "gdk-pixbuf"
 # GitHub command-line tool
 brew "gh"
+# OpenType text shaping engine
+brew "harfbuzz"
+# Framework for layout and rendering of i18n text
+brew "pango"
 # Interpreter for PostScript and PDF
 brew "ghostscript"
 # Distributed revision control system
@@ -102,9 +102,7 @@ brew "htop"
 brew "hyperfine"
 # C/C++ and Java libraries for Unicode and globalization
 brew "icu4c@76"
-# Library to render SVG files using Cairo
-brew "librsvg"
-# Tools and libraries to manipulate images in many formats
+# Tools and libraries to manipulate images in select formats
 brew "imagemagick"
 # Command-line interface for JFrog products
 brew "jfrog-cli"
@@ -120,6 +118,8 @@ brew "lazygit"
 brew "lf"
 # Implementation of the file(1) command
 brew "libmagic"
+# Library to render SVG files using Cairo
+brew "librsvg"
 # Package manager for the Lua programming language
 brew "luarocks"
 # Polyglot runtime manager (asdf rust clone)
@@ -128,6 +128,8 @@ brew "mise"
 brew "mole"
 # Small build system for use with gyp or CMake
 brew "ninja"
+# Port scanning utility for large networks
+brew "nmap"
 # Tiny, lightning fast, feature-packed file manager
 brew "nnn"
 # Paste PNG into files
@@ -186,9 +188,11 @@ brew "qmk/qmk/qmk"
 brew "stripe/stripe-cli/stripe"
 brew "tursodatabase/tap/turso"
 # AeroSpace is an i3-like tiling window manager for macOS
-cask "aerospace"
+cask "nikitabobko/tap/aerospace"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
+# Terminal-based AI coding assistant
+cask "claude-code"
 # App to build and share containerised applications and microservices
 cask "docker-desktop"
 # Multi-platform multi-messaging app
@@ -230,7 +234,7 @@ cask "mos"
 # Orchestrates virtual Ubuntu instances
 cask "multipass"
 # Unofficial Google Nearby Share app
-cask "neardrop"
+cask "grishka/grishka/neardrop"
 # Developer IDE or Management Environment for Neo4j instances
 cask "neo4j-desktop"
 # Reverse proxy, secure introspectable tunnels to localhost
@@ -254,7 +258,7 @@ cask "segger-jlink"
 # Collection of apps available by subscription
 cask "setapp"
 # Solidity Compiler for Solana and Substrate
-cask "solang"
+cask "hyperledger/solang/solang"
 # Open source cross-platform file explorer
 cask "spacedrive"
 # Music streaming service
