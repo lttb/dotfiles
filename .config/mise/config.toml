@@ -46,6 +46,7 @@ uv                      = "latest"
 "npm:oxfmt" = "latest"
 "npm:oxlint" = "latest"
 "npm:@jimsheen/yalc" = "latest"
+"npm:openclaw" = "latest"
 
 [settings]
 experimental                        = true
