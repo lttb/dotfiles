@@ -1,8 +1,7 @@
+tap "antoniorodr/memo"
 tap "ethereum/ethereum"
 tap "fsouza/prettierd"
 tap "grishka/grishka"
-tap "homebrew/bundle"
-tap "homebrew/services"
 tap "hyperledger/solang"
 tap "jesseduffield/lazygit"
 tap "koekeishiya/formulae"
@@ -10,18 +9,23 @@ tap "libsql/sqld"
 tap "microsoft/git"
 tap "ngrok/ngrok"
 tap "nikitabobko/tap"
+tap "openhue/cli"
 tap "osx-cross/arm"
 tap "osx-cross/avr"
 tap "oven-sh/bun"
 tap "qmk/qmk"
 tap "sst/tap"
+tap "steipete/tap"
 tap "stripe/stripe-cli"
 tap "tursodatabase/tap"
 tap "wez/wezterm"
+tap "yakitrak/yakitrak"
 # Simple, modern, secure file encryption
 brew "age"
 # Library and utilities for processing GIFs
 brew "giflib"
+# Command-line interface for SQLite
+brew "sqlite"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Clone of cat(1) with syntax highlighting and Git integration
@@ -51,7 +55,7 @@ brew "cocoapods"
 # More intuitive version of du in rust
 brew "dust"
 # Soft fork of the helix editor
-brew "evil-helix", link: false
+brew "evil-helix"
 # Modern, maintained replacement for ls
 brew "eza"
 # Simple, fast and user-friendly alternative to find
@@ -95,7 +99,9 @@ brew "gperf"
 # Cross-platform program for developing Haskell projects
 brew "haskell-stack"
 # Post-modern modal text editor
-brew "helix"
+brew "helix", link: false
+# CLI email client written in Rust
+brew "himalaya"
 # Improved top (interactive process viewer)
 brew "htop"
 # Command-line benchmarking tool
@@ -132,6 +138,8 @@ brew "ninja"
 brew "nmap"
 # Tiny, lightning fast, feature-packed file manager
 brew "nnn"
+# Create, run, and share large language models (LLMs)
+brew "ollama"
 # Paste PNG into files
 brew "pngpaste"
 # PDF rendering library (based on the xpdf-3.0 code base)
@@ -180,15 +188,34 @@ brew "zellij"
 brew "zoxide"
 # UNIX shell (command interpreter)
 brew "zsh"
+# CLI app to manage your Apple Notes and Apple reminders
+brew "antoniorodr/memo/memo"
 # A tiling window manager for macOS based on binary space partitioning.
 brew "koekeishiya/formulae/yabai"
+# OpenHue CLI is a command-line interface for interacting with Philips Hue smart lighting systems
+brew "openhue/cli/openhue-cli"
 # Quantum Mechanical Keyboard (QMK) Firmware
 brew "qmk/qmk/qmk"
+# Google CLI for Gmail, Calendar, Drive, and Contacts
+brew "steipete/tap/gogcli"
+# Modern Go client + CLI for the Google Places API (New)
+brew "steipete/tap/goplaces"
+# Lightning-fast macOS screenshots & AI vision analysis
+brew "steipete/tap/peekaboo"
+# Fast CLI for Apple Reminders
+brew "steipete/tap/remindctl"
+# Link → clean text → summary
+brew "steipete/tap/summarize"
+# WhatsApp CLI built on whatsmeow
+brew "steipete/tap/wacli"
 # Stripe CLI utility
 brew "stripe/stripe-cli/stripe"
 brew "tursodatabase/tap/turso"
+brew "yakitrak/yakitrak/obsidian-cli"
 # AeroSpace is an i3-like tiling window manager for macOS
 cask "nikitabobko/tap/aerospace"
+# Open source IDE for exploring and testing APIs
+cask "bruno"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
 # Terminal-based AI coding assistant
@@ -209,8 +236,6 @@ cask "font-symbols-only-nerd-font"
 cask "gcloud-cli"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty@tip"
-# Cross-platform Git credential storage for multiple hosting providers
-cask "git-credential-manager"
 # Cross-platform Git credential storage for multiple hosting providers
 cask "git-credential-manager"
 # Neovim GUI written in Golang, using a Golang qt backend
@@ -245,6 +270,8 @@ cask "nordic-nrf-command-line-tools"
 cask "nrfutil"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# Get up and running with large language models locally
+cask "ollama-app"
 # Toolbox companion for QMK Firmware
 cask "qmk-toolbox"
 # Control your tools with a few keystrokes
