@@ -158,6 +158,8 @@ brew "qemu"
 brew "rename"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Wrapper around ripgrep that adds multiple rich file types
+brew "ripgrep-all"
 # 7-Zip is a file archiver with a high compression ratio
 brew "sevenzip"
 # Fast, configurable, shell plugin manager
@@ -230,6 +232,7 @@ cask "figma"
 cask "flutter"
 cask "font-fira-code"
 cask "font-google-sans-code"
+cask "font-inclusive-sans"
 cask "font-jetbrains-mono"
 cask "font-symbols-only-nerd-font"
 # Set of tools to manage resources and applications hosted on Google Cloud
@@ -293,6 +296,8 @@ cask "spacedrive"
 # Music streaming service
 cask "spotify"
 cask "switchkey"
+# Mesh VPN based on WireGuard
+cask "tailscale-app"
 # Messaging app with a focus on speed and security
 cask "telegram"
 # Unicode keyboard layout editor
