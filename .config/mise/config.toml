@@ -33,22 +33,25 @@ cargo-binstall          = "latest"
 deno                    = "latest"
 gradle                  = "latest"
 java                    = "openjdk-21"
+"npm:@jimsheen/yalc"    = "latest"
 "npm:aedes-cli"         = "latest"
 "npm:edge-impulse-cli"  = "latest"
+"npm:jscpd"             = "latest"
 "npm:mjml"              = "latest"
 "npm:npkill"            = "latest"
+"npm:openclaw"          = "latest"
+"npm:oxfmt"             = "latest"
+"npm:oxlint"            = "latest"
 "pipx:cbor2"            = "latest"
 "pipx:fit-tool"         = "latest"
 "pipx:marker-pdf"       = "latest"
 rust                    = "latest"
 uv                      = "latest"
-"npm:jscpd" = "latest"
-"npm:oxfmt" = "latest"
-"npm:oxlint" = "latest"
-"npm:@jimsheen/yalc" = "latest"
-"npm:openclaw" = "latest"
 
 [settings]
 experimental                        = true
 idiomatic_version_file_enable_tools = ["java", "node"]
 lockfile                            = true
+
+[settings.npm]
+package_manager = "bun"
