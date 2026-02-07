@@ -20,3 +20,6 @@ export DELTA_FEATURES="+$THEME_MODE"
 # bun completions
 # no need as they're handled by sheldon
 # @see https://github.com/oven-sh/bun/issues/10897
+
+# OpenClaw Completion
+zsh-defer safe_source "$HOME/.openclaw/completions/openclaw.zsh"
