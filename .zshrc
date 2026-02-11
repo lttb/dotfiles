@@ -23,3 +23,4 @@ export DELTA_FEATURES="+$THEME_MODE"
 
 # OpenClaw Completion
 zsh-defer safe_source "$HOME/.openclaw/completions/openclaw.zsh"
+
