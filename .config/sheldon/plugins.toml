@@ -243,3 +243,6 @@ inline = 'zsh-defer _evalcache tv init zsh'
 
 [plugins.worktrunk]
 inline = 'zsh-defer _evalcache wt config shell init zsh'
+
+[plugins.entire]
+inline = 'zsh-defer _evalcache entire completion zsh'
