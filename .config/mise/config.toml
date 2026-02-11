@@ -47,6 +47,8 @@ java                    = "openjdk-21"
 "pipx:marker-pdf"       = "latest"
 rust                    = "latest"
 uv                      = "latest"
+"npm:pm2" = "latest"
+"npm:uuid" = "latest"
 
 [settings]
 experimental                        = true
