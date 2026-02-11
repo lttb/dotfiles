@@ -49,6 +49,7 @@ rust                    = "latest"
 uv                      = "latest"
 "npm:pm2" = "latest"
 "npm:uuid" = "latest"
+"github:entireio/cli" = "latest"
 
 [settings]
 experimental                        = true
