@@ -24,6 +24,8 @@ tap "yakitrak/yakitrak"
 brew "age"
 # Library and utilities for processing GIFs
 brew "giflib"
+# Code searching, linting, rewriting
+brew "ast-grep"
 # Command-line interface for SQLite
 brew "sqlite"
 # Official Amazon AWS command-line interface
@@ -82,6 +84,8 @@ brew "ghostscript"
 brew "git"
 # Syntax-highlighting pager for git and diff output
 brew "git-delta"
+# Quickly rewrite git repository history
+brew "git-filter-repo"
 # Git extension for versioning large files
 brew "git-lfs"
 # Blazing fast terminal-ui for git written in rust
@@ -170,6 +174,8 @@ brew "solidity"
 brew "sops"
 # Cross-shell prompt for astronauts
 brew "starship"
+# Easiest, most secure way to use WireGuard and 2FA
+brew "tailscale"
 # General purpose fuzzy finder TUI
 brew "television"
 # Program that allows you to count code, quickly
@@ -180,6 +186,8 @@ brew "vim"
 brew "vivid"
 # Internet file retriever
 brew "wget"
+# Port of OpenAI's Whisper model in C/C++
+brew "whisper-cpp"
 # Yet Another Dotfiles Manager
 brew "yadm"
 # Blazing fast terminal file manager written in Rust, based on async I/O
@@ -312,3 +320,5 @@ cask "wezterm"
 cask "zed"
 # Video communication and virtual meeting platform
 cask "zoom"
+go "cmd/go"
+go "cmd/gofmt"
