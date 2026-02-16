@@ -7,37 +7,33 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-	"features": {
-		"edit_prediction_provider": "zed"
-	},
-	"theme": "Morningstar Light",
-	"buffer_font_size": 14,
-	"experimental.theme_overrides": {
-		"players": [
-			{
-				// light (575279)
-				// "cursor": "#202429"
-				// dark
-				"cursor": "#C9C9C9"
-			}
-		]
-	},
-	"ui_font_family": "JetBrains Mono",
-	"format_on_save": "on",
-	"vim_mode": true,
-	"hover_popover_enabled": true,
-	"enable_language_server": true,
-	"show_completions_on_input": true,
-	"active_pane_magnification": 1,
-	"languages": {
-		"JavaScript": {
-			"format_on_save": "on",
-			"formatter": {
-				"external": {
-					"command": "prettier",
-					"arguments": ["--stdin-filepath", "{buffer_path}"]
-				}
-			}
-		}
-	}
+  "theme": "Github Plus Light",
+  "buffer_font_size": 14,
+  "experimental.theme_overrides": {
+    "players": [
+      {
+        // light (575279)
+        // "cursor": "#202429"
+        // dark
+        "cursor": "#C9C9C9",
+      },
+    ],
+  },
+  "ui_font_family": "JetBrains Mono",
+  "format_on_save": "on",
+  "vim_mode": true,
+  "hover_popover_enabled": true,
+  "enable_language_server": true,
+  "show_completions_on_input": true,
+  "languages": {
+    "JavaScript": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--stdin-filepath", "{buffer_path}"],
+        },
+      },
+    },
+  },
 }
