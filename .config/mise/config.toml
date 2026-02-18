@@ -54,6 +54,7 @@ uv                      = "latest"
 "npm:typescript-language-server" = "latest"
 go = "latest"
 prek = "latest"
+"pipx:xlsx2csv" = "latest"
 
 [settings]
 experimental                        = true
