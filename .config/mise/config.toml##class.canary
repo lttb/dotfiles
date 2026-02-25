@@ -1,0 +1,56 @@
+[tools]
+# {{{ sandbox
+biome                                 = "latest"
+bun                                   = "latest"
+codex                                 = "latest"
+fnox                                  = "latest"
+node                                  = "latest"
+npm                                   = "latest"
+"npm:@github/copilot"                 = "latest"
+"npm:@google/gemini-cli"              = "latest"
+"npm:@openai/codex"                   = "latest"
+"npm:@zed-industries/claude-code-acp" = "latest"
+"npm:esbuild"                         = "0.25"
+"npm:prettier-language-server"        = "latest"
+"npm:serve"                           = "latest"
+"npm:update-ts-references"            = "latest"
+"npm:zx"                              = "latest"
+opencode                              = "latest"
+pipx                                  = "latest"
+pnpm                                  = "latest"
+prettier                              = "latest"
+python                                = "latest"
+usage                                 = "latest"
+wrangler                              = "latest"
+# }}}
+
+cargo-binstall          = "latest"
+"cargo:cbor-cli"        = "latest"
+"cargo:neovide"         = "latest"
+"cargo:resvg"           = "latest"
+"cargo:tree-sitter-cli" = "latest"
+"cargo:worktrunk"       = "latest"
+deno                    = "latest"
+gradle                  = "latest"
+java                    = "openjdk-21"
+"npm:@jimsheen/yalc"    = "latest"
+"npm:jscpd"             = "latest"
+"npm:mjml"              = "latest"
+"npm:npkill"            = "latest"
+# "npm:oxfmt"             = "0.28.0"
+# "npm:oxlint"            = "1.43.0"
+"npm:pm2"         = "latest"
+"npm:uuid"        = "latest"
+"pipx:cbor2"      = "latest"
+"pipx:fit-tool"   = "latest"
+"pipx:marker-pdf" = "latest"
+rust              = "latest"
+uv                = "latest"
+
+[settings]
+experimental                        = true
+idiomatic_version_file_enable_tools = ["java", "node"]
+lockfile                            = true
+
+[settings.npm]
+package_manager = "pnpm"
