@@ -55,6 +55,9 @@ uv                      = "latest"
 go = "latest"
 prek = "latest"
 "pipx:xlsx2csv" = "latest"
+"npm:playwriter" = "latest"
+"pipx:nano-pdf" = "latest"
+"npm:@googleworkspace/cli" = "latest"
 
 [settings]
 experimental                        = true
