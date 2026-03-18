@@ -54,8 +54,12 @@ brew "cloudflared"
 brew "cmake"
 # Dependency manager for Cocoa projects
 brew "cocoapods"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
 # More intuitive version of du in rust
 brew "dust"
+# Run arbitrary commands when files change
+brew "entr"
 # Soft fork of the helix editor
 brew "evil-helix"
 # Modern, maintained replacement for ls
@@ -68,6 +72,8 @@ brew "ffmpeg"
 brew "fish"
 # Formatter for Fennel code
 brew "fnlfmt"
+# Monitor a directory for changes and run a shell command
+brew "fswatch"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # Toolkit for image loading and pixel buffer manipulation
@@ -144,6 +150,8 @@ brew "nmap"
 brew "nnn"
 # Create, run, and share large language models (LLMs)
 brew "ollama"
+# Swiss-army knife of markup format conversion
+brew "pandoc"
 # Paste PNG into files
 brew "pngpaste"
 # PDF rendering library (based on the xpdf-3.0 code base)
@@ -180,6 +188,8 @@ brew "tailscale"
 brew "television"
 # Program that allows you to count code, quickly
 brew "tokei"
+# Markup-based typesetting system
+brew "typst"
 # Vi 'workalike' with many additional features
 brew "vim"
 # Generator for LS_COLORS with support for multiple color themes
@@ -192,6 +202,8 @@ brew "whisper-cpp"
 brew "yadm"
 # Blazing fast terminal file manager written in Rust, based on async I/O
 brew "yazi"
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
+brew "yq"
 # Pluggable terminal workspace, with terminal multiplexer as the base feature
 brew "zellij"
 # Shell extension to navigate your filesystem faster
@@ -206,7 +218,7 @@ brew "koekeishiya/formulae/yabai"
 brew "openhue/cli/openhue-cli"
 # Quantum Mechanical Keyboard (QMK) Firmware
 brew "qmk/qmk/qmk"
-# Google CLI for Gmail, Calendar, Drive, and Contacts
+# Google CLI for Gmail, Calendar, Drive, Docs, Sheets, and more
 brew "steipete/tap/gogcli"
 # Modern Go client + CLI for the Google Places API (New)
 brew "steipete/tap/goplaces"
@@ -281,6 +293,8 @@ cask "ngrok"
 cask "nordic-nrf-command-line-tools"
 # Unified CLI utility for Nordic Semiconductor products
 cask "nrfutil"
+# Open-source software for live streaming and screen recording
+cask "obs"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 # Get up and running with large language models locally
