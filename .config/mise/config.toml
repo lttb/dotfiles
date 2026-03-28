@@ -58,6 +58,7 @@ prek = "latest"
 "npm:playwriter" = "latest"
 "pipx:nano-pdf" = "latest"
 "npm:@googleworkspace/cli" = "latest"
+"npm:agent-browser" = "latest"
 
 [settings]
 experimental                        = true
