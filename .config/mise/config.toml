@@ -60,6 +60,7 @@ java                             = "openjdk-21"
 prek                             = "latest"
 rust                             = "latest"
 uv                               = "latest"
+"cargo:ck-search" = "latest"
 
 [settings]
 experimental                        = true

@@ -10,7 +10,7 @@ WORDCHARS=${WORDCHARS//[\/-]/}
 
 source $HOME/.config/zsh/sheldon.zsh
 
-zsh-defer safe_source $HOME/.zsh/mise-enter.zsh
+# zsh-defer safe_source $HOME/.zsh/mise-enter.zsh
 
 zsh-defer safe_source $HOME/.secrets/private.zsh
 
@@ -22,5 +22,6 @@ export DELTA_FEATURES="+$THEME_MODE"
 # @see https://github.com/oven-sh/bun/issues/10897
 
 # OpenClaw Completion
-zsh-defer safe_source "$HOME/.openclaw/completions/openclaw.zsh"
+# zsh-defer safe_source "$HOME/.openclaw/completions/openclaw.zsh"
 
+alias rpi-imager="/Applications/Raspberry\ Pi\ Imager.app/Contents/MacOS/rpi-imager"
