@@ -91,10 +91,30 @@ zstyle ':completion:*' accept-exact-dirs true
 zstyle ':completion:*' accept-exact '*(N)'
 '''
 
+# Loaded EAGERLY (no `apply = ["defer"]`) so the post hook below can override
+# `share_history` reliably. Deferred plugins schedule via `zsh-defer source`,
+# which means their setopts run AFTER the post hook — any override here would
+# be clobbered. Eager load is fine: lib/history.zsh is ~9 lines.
 [plugins.oh-my-zsh]
-apply  = ["defer"]
 github = "ohmyzsh/ohmyzsh"
 use    = ["lib/history.zsh"]
+[plugins.oh-my-zsh.hooks]
+post = '''
+# Override oh-my-zsh history defaults.
+#
+# share_history both (a) appends commands to HISTFILE and (b) re-imports new
+# commands from HISTFILE on every history access — so pressing up-arrow in
+# terminal A would start showing commands from terminal B. We want (a) but
+# not (b), which is exactly what inc_append_history gives us. Since
+# share_history is a superset, we must unset it first; just setting
+# inc_append_history alongside share_history is a no-op.
+unsetopt share_history
+setopt inc_append_history
+
+# Raise from oh-my-zsh defaults (50000 / 10000) to keep more history around.
+HISTSIZE=100000
+SAVEHIST=100000
+'''
 
 [plugins.zsh-autosuggestions]
 apply  = ["defer"]
