@@ -56,6 +56,8 @@ brew "cmake"
 brew "cocoapods"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# Embeddable SQL OLAP Database Management System
+brew "duckdb"
 # More intuitive version of du in rust
 brew "dust"
 # Run arbitrary commands when files change
@@ -301,6 +303,8 @@ cask "obsidian"
 cask "ollama-app"
 # Toolbox companion for QMK Firmware
 cask "qmk-toolbox"
+# Imaging utility to install operating systems to a microSD card
+cask "raspberry-pi-imager"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Move and resize windows using keyboard shortcuts or snap areas
@@ -336,3 +340,4 @@ cask "zed"
 cask "zoom"
 go "cmd/go"
 go "cmd/gofmt"
+uv "nano-pdf"
