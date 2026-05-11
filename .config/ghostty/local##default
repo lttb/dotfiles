@@ -1,2 +1,2 @@
-env = GHOSTTY_THEME_MODE=dark
-theme = "morningstar_dark"
+env = GHOSTTY_THEME_MODE=light
+theme = "morningstar_light"
