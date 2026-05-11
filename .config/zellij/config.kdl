@@ -311,7 +311,9 @@ web_client {
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
-// theme "dracula"
+theme "catppuccin-latte"
+theme_dark "catppuccin-frappe"
+theme_light "catppuccin-latte"
 
 // Choose the base input mode of zellij.
 // Default: normal
