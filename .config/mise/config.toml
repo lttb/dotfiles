@@ -61,6 +61,7 @@ java                       = "openjdk-26"
 prek                             = "latest"
 rust                             = "latest"
 uv                               = "latest"
+"pipx:semble" = "latest"
 
 [settings]
 experimental                        = true
