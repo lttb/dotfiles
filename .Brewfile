@@ -150,8 +150,6 @@ brew "ninja"
 brew "nmap"
 # Tiny, lightning fast, feature-packed file manager
 brew "nnn"
-# Create, run, and share large language models (LLMs)
-brew "ollama"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 # Paste PNG into files
