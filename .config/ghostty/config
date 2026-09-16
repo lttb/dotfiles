@@ -21,7 +21,7 @@ macos-option-as-alt = true
 cursor-style = bar
 mouse-hide-while-typing = true
 
-custom-shader = ./shaders-custom/cursor_smear_2.glsl
+custom-shader = ./shaders-custom/cursor_glide.glsl
 custom-shader-animation = true
 
 quick-terminal-position = center
