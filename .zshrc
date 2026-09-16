@@ -25,3 +25,8 @@ export DELTA_FEATURES="+$THEME_MODE"
 # zsh-defer safe_source "$HOME/.openclaw/completions/openclaw.zsh"
 
 alias rpi-imager="/Applications/Raspberry\ Pi\ Imager.app/Contents/MacOS/rpi-imager"
+
+# Added by LM Studio CLI (lms)
+# defined in zprofile
+# End of LM Studio CLI section
+
