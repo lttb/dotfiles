@@ -231,8 +231,6 @@ brew "zellij"
 brew "zoxide"
 # UNIX shell (command interpreter)
 brew "zsh"
-# Fast X CLI for tweeting, replying, and reading
-brew "steipete/tap/bird"
 cask "aerospace"
 # Terminal interface for Antigravity agents
 cask "antigravity-cli"
