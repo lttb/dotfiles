@@ -1,29 +1,29 @@
+tap "anomalyco/tap", "https://github.com/anomalyco/homebrew-tap.git"
 tap "antoniorodr/memo"
+tap "asmvik/formulae", "https://github.com/asmvik/homebrew-formulae.git"
 tap "ethereum/ethereum"
 tap "fsouza/prettierd"
 tap "grishka/grishka"
-tap "hyperledger/solang"
+tap "hyperledger-solang/solang", "https://github.com/hyperledger-solang/homebrew-solang.git"
 tap "jesseduffield/lazygit"
-tap "koekeishiya/formulae"
 tap "libsql/sqld"
 tap "microsoft/git"
 tap "ngrok/ngrok"
 tap "nikitabobko/tap"
+tap "openclaw/tap", trusted: { casks: ["goplaces"] }
 tap "openhue/cli"
 tap "osx-cross/arm"
 tap "osx-cross/avr"
 tap "oven-sh/bun"
 tap "qmk/qmk"
-tap "sst/tap"
 tap "steipete/tap"
 tap "stripe/stripe-cli"
+tap "thdxg/tap"
 tap "tursodatabase/tap"
-tap "wez/wezterm"
+tap "wezterm/wezterm", "https://github.com/wezterm/homebrew-wezterm.git"
 tap "yakitrak/yakitrak"
 # Simple, modern, secure file encryption
 brew "age"
-# Library and utilities for processing GIFs
-brew "giflib"
 # Code searching, linting, rewriting
 brew "ast-grep"
 # Command-line interface for SQLite
@@ -56,6 +56,8 @@ brew "cmake"
 brew "cocoapods"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# Library and utilities for processing GIFs
+brew "giflib"
 # Embeddable SQL OLAP Database Management System
 brew "duckdb"
 # More intuitive version of du in rust
@@ -66,6 +68,8 @@ brew "entr"
 brew "evil-helix"
 # Modern, maintained replacement for ls
 brew "eza"
+# Test various flash cards
+brew "f3"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # Play, record, convert, and stream select audio and video codecs
@@ -182,6 +186,8 @@ brew "solidity"
 brew "sops"
 # Cross-shell prompt for astronauts
 brew "starship"
+# Multi-modal AI tool to extract and summarize content
+brew "summarize"
 # Easiest, most secure way to use WireGuard and 2FA
 brew "tailscale"
 # General purpose fuzzy finder TUI
@@ -197,7 +203,7 @@ brew "vivid"
 # Internet file retriever
 brew "wget"
 # Port of OpenAI's Whisper model in C/C++
-brew "whisper-cpp"
+brew "whisper.cpp"
 # Yet Another Dotfiles Manager
 brew "yadm"
 # Blazing fast terminal file manager written in Rust, based on async I/O
@@ -210,38 +216,15 @@ brew "zellij"
 brew "zoxide"
 # UNIX shell (command interpreter)
 brew "zsh"
-# CLI app to manage your Apple Notes and Apple reminders
-brew "antoniorodr/memo/memo"
-# A tiling window manager for macOS based on binary space partitioning.
-brew "koekeishiya/formulae/yabai"
-# OpenHue CLI is a command-line interface for interacting with Philips Hue smart lighting systems
-brew "openhue/cli/openhue-cli"
-# Quantum Mechanical Keyboard (QMK) Firmware
-brew "qmk/qmk/qmk"
-# Google CLI for Gmail, Calendar, Drive, Docs, Sheets, and more
-brew "steipete/tap/gogcli"
-# Modern Go client + CLI for the Google Places API (New)
-brew "steipete/tap/goplaces"
-# Lightning-fast macOS screenshots & AI vision analysis
-brew "steipete/tap/peekaboo"
-# Fast CLI for Apple Reminders
-brew "steipete/tap/remindctl"
-# Link → clean text → summary
-brew "steipete/tap/summarize"
-# WhatsApp CLI built on whatsmeow
-brew "steipete/tap/wacli"
-# Stripe CLI utility
-brew "stripe/stripe-cli/stripe"
-brew "tursodatabase/tap/turso"
-brew "yakitrak/yakitrak/obsidian-cli"
-# AeroSpace is an i3-like tiling window manager for macOS
-cask "nikitabobko/tap/aerospace"
+cask "aerospace"
+# 3D creation suite
+cask "blender"
 # Open source IDE for exploring and testing APIs
 cask "bruno"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
 # Terminal-based AI coding assistant
-cask "claude-code"
+cask "claude-code@latest"
 # App to build and share containerised applications and microservices
 cask "docker-desktop"
 # Multi-platform multi-messaging app
@@ -255,6 +238,8 @@ cask "font-google-sans-code"
 cask "font-inclusive-sans"
 cask "font-jetbrains-mono"
 cask "font-symbols-only-nerd-font"
+# 3D parametric modeller
+cask "freecad"
 # Set of tools to manage resources and applications hosted on Google Cloud
 cask "gcloud-cli"
 # Terminal emulator that uses platform-native UI and GPU acceleration
@@ -267,6 +252,7 @@ cask "goneovim"
 cask "google-chrome"
 # Client for the Google Drive storage service
 cask "google-drive"
+cask "goplaces"
 # Desktop automation application
 cask "hammerspoon"
 # Vector graphics editor
@@ -275,6 +261,10 @@ cask "inkscape"
 cask "karabiner-elements"
 # GPU-based terminal emulator
 cask "kitty"
+# Discover, download, and run local LLMs
+cask "lm-studio"
+# Native terminal built with SwiftUI and libghostty
+cask "thdxg/tap/macterm", trusted: true
 # Shows the next meeting in the menu bar
 cask "meetingbar"
 # Tool to control external monitor brightness & volume
@@ -283,8 +273,7 @@ cask "monitorcontrol"
 cask "mos"
 # Orchestrates virtual Ubuntu instances
 cask "multipass"
-# Unofficial Google Nearby Share app
-cask "grishka/grishka/neardrop"
+cask "neardrop"
 # Developer IDE or Management Environment for Neo4j instances
 cask "neo4j-desktop"
 # Reverse proxy, secure introspectable tunnels to localhost
@@ -313,13 +302,14 @@ cask "rectangle-pro"
 cask "segger-jlink"
 # Collection of apps available by subscription
 cask "setapp"
-# Solidity Compiler for Solana and Substrate
-cask "hyperledger/solang/solang"
+cask "solang"
 # Open source cross-platform file explorer
 cask "spacedrive"
 # Music streaming service
 cask "spotify"
 cask "switchkey"
+# Native database client for many database types
+cask "tablepro"
 # Mesh VPN based on WireGuard
 cask "tailscale-app"
 # Messaging app with a focus on speed and security
