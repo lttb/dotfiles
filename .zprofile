@@ -1,7 +1,3 @@
-# The following lines were added by Docker Desktop to add commands to your PATH.
-export PATH="$HOME/.docker/bin"
-# End of Docker Desktop section.
-
 # doesn't work correctly with v11
 # export NVIM_LISTEN_ADDRESS="/tmp/nvimsocket nvim"
 
