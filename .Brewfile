@@ -5,6 +5,7 @@ tap "ethereum/ethereum"
 tap "fsouza/prettierd"
 tap "grishka/grishka"
 tap "hyperledger-solang/solang", "https://github.com/hyperledger-solang/homebrew-solang.git"
+tap "j178/tap"
 tap "jesseduffield/lazygit"
 tap "libsql/sqld"
 tap "microsoft/git"
@@ -24,6 +25,8 @@ tap "wezterm/wezterm", "https://github.com/wezterm/homebrew-wezterm.git"
 tap "yakitrak/yakitrak"
 # Simple, modern, secure file encryption
 brew "age"
+# Arduino command-line interface
+brew "arduino-cli"
 # Code searching, linting, rewriting
 brew "ast-grep"
 # Command-line interface for SQLite
@@ -54,6 +57,8 @@ brew "cloudflared"
 brew "cmake"
 # Dependency manager for Cocoa projects
 brew "cocoapods"
+# Create and run Linux containers using lightweight virtual machines
+brew "container"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Library and utilities for processing GIFs
@@ -142,12 +147,18 @@ brew "lf"
 brew "libmagic"
 # Library to render SVG files using Cairo
 brew "librsvg"
+# LLM inference in C/C++
+brew "llama.cpp"
 # Package manager for the Lua programming language
 brew "luarocks"
 # Polyglot runtime manager (asdf rust clone)
 brew "mise"
+# Simple tool to make locally trusted development certificates
+brew "mkcert"
 # Deep clean and optimize your Mac
 brew "mole"
+# Diagnose infrastructure problems with metrics, visualizations & alarms
+brew "netdata"
 # Small build system for use with gyp or CMake
 brew "ninja"
 # Port scanning utility for large networks
@@ -158,6 +169,8 @@ brew "nnn"
 brew "pandoc"
 # Paste PNG into files
 brew "pngpaste"
+# PNG image optimizing utility
+brew "pngquant"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
 # Modern replacement for ps written in Rust
@@ -188,6 +201,8 @@ brew "sops"
 brew "starship"
 # Multi-modal AI tool to extract and summarize content
 brew "summarize"
+# Change macOS audio source from the command-line
+brew "switchaudio-osx"
 # Easiest, most secure way to use WireGuard and 2FA
 brew "tailscale"
 # General purpose fuzzy finder TUI
@@ -216,7 +231,11 @@ brew "zellij"
 brew "zoxide"
 # UNIX shell (command interpreter)
 brew "zsh"
+# Fast X CLI for tweeting, replying, and reading
+brew "steipete/tap/bird"
 cask "aerospace"
+# Terminal interface for Antigravity agents
+cask "antigravity-cli"
 # 3D creation suite
 cask "blender"
 # Open source IDE for exploring and testing APIs
@@ -329,3 +348,5 @@ cask "zoom"
 go "cmd/go"
 go "cmd/gofmt"
 uv "nano-pdf"
+uv "slopo"
+npm "rift-snapshot"
