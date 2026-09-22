@@ -2,7 +2,9 @@
 # {{{ sandbox
 biome                                 = "latest"
 bun                                   = "latest"
-codex                                 = "latest"
+# codex: use the npm channel only. The aqua backend (`codex`) shadowed it on PATH
+# and its registry never indexed 0.153.x stable, pinning the mini on 0.152.0 —
+# which cannot run gpt-6-astra ("requires a newer version of Codex").
 fnox                                  = "latest"
 node                                  = "latest"
 npm                                   = "latest"
@@ -62,6 +64,14 @@ prek                             = "latest"
 rust                             = "latest"
 uv                               = "latest"
 "pipx:semble" = "latest"
+"npm:@restatedev/restate-server" = "latest"
+"npm:@restatedev/restate" = "latest"
+"npm:codex" = "latest"
+colima = "latest"
+lima = "latest"
+"ubi:open-telemetry/opentelemetry-collector-releases" = { version = "latest", exe = "otelcol-contrib" }
+"npm:@mariozechner/pi-coding-agent" = "0.73.1"
+duckdb = "latest"
 
 [settings]
 experimental                        = true

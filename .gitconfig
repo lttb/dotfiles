@@ -43,6 +43,14 @@
 [include]
   path = ~/.config/git/private/.gitconfig
 
+# NOTE: this generic block MUST stay ABOVE the per-host [credential "https://…"]
+# blocks below. `helper =` resets the whole accumulated helper list, and git reads
+# config in FILE ORDER — with this block last, its reset wiped the github-specific
+# `gh auth git-credential` helper, so GCM (.NET, ~0.3s/call) answered every GitHub
+# request instead. Reordering cut `git push` from ~2.1s to ~1.5s.
+[credential]
+	helper =
+	helper = /usr/local/share/gcm-core/git-credential-manager
 [credential "https://github.com"]
 	helper =
 	helper = !/opt/homebrew/bin/gh auth git-credential
@@ -52,8 +60,5 @@
 [diff "lockb"]
 	textconv = bun
 	binary = true
-[credential]
-	helper = 
-	helper = /usr/local/share/gcm-core/git-credential-manager
-[credential "https://dev.azure.com"]
-	useHttpPath = true
+[submodule]
+	recurse = true
