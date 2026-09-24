@@ -4,6 +4,8 @@ tap "asmvik/formulae", "https://github.com/asmvik/homebrew-formulae.git"
 tap "ethereum/ethereum"
 tap "fsouza/prettierd"
 tap "grishka/grishka"
+tap "homebrew/bundle"
+tap "homebrew/services"
 tap "hyperledger-solang/solang", "https://github.com/hyperledger-solang/homebrew-solang.git"
 tap "j178/tap"
 tap "jesseduffield/lazygit"
@@ -165,6 +167,8 @@ brew "ninja"
 brew "nmap"
 # Tiny, lightning fast, feature-packed file manager
 brew "nnn"
+# Create, run, and share large language models (LLMs)
+brew "ollama"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 # Paste PNG into files
@@ -244,6 +248,8 @@ cask "chatgpt"
 cask "claude-code@latest"
 # App to build and share containerised applications and microservices
 cask "docker-desktop"
+# System-wide audio equaliser
+cask "eqmac"
 # Multi-platform multi-messaging app
 cask "ferdium"
 # Collaborative team software
